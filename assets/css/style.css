@@ -168,7 +168,8 @@ p {
 .advantages .row p {
     padding: 0 10%;
     font-size: 18px;
-
+  min-height: 250px;
+  margin-top: 2rem;
 
 }
 .advantages .row img {
@@ -187,9 +188,7 @@ p {
   margin-left: 10%;
 }
 
-.carousel-item {
-  height: 750px;
-}
+
 
 /* TOURNAMENTS */
 
@@ -277,7 +276,7 @@ p {
   width: auto;
   height: 40px;
   top: auto;
-  bottom: 3rem;
+  bottom: -3rem;
   left: 43vw;
 }
 
@@ -286,8 +285,12 @@ p {
   width: auto;
   height: 40px;
   top: auto;
-  bottom: 3rem;
+  bottom: -3rem;
   right: 43vw;
+}
+
+.tournaments .carousel-inner{
+  margin-bottom: 10rem;
 }
 
 
@@ -477,17 +480,17 @@ font-size: 21px;
 
 
   /* Carousel */
-  .carousel-item{
+  .main-carousel .carousel-item{
     height: 40rem;
   }
 
-  .carousel-item img{
+  .main-carousel .carousel-item img{
     width: 60rem !important;
     height: 33rem;
     margin-left: -17rem;
   }
 
-  .carousel-caption{
+  .main-carousel .carousel-caption{
     display: block !important;
     top: 1rem;
     left: 1.5rem;
@@ -516,9 +519,7 @@ font-size: 21px;
     margin: 10px 0px 0 5px;
   }
 
-  .carousel-buttons .btn.active {
-
-  }
+ 
 
 
   /* Advantages */
@@ -530,6 +531,54 @@ font-size: 21px;
     overflow: hidden;
 
 }
+
+.advantages .row p {
+  
+  min-height: 150px;
+  
+}
+
+
+/* Tournament Prizes */
+
+.tournaments h2{
+  text-align: center;
+  
+}
+
+.tournaments .container-prizes{
+  margin-bottom: 10rem;
+}
+
+
+.grand-prize-container {
+  margin: 3rem 1rem 0rem !important;
+}
+
+
+
+
+.tournaments .card-container {
+  padding: 0 1.5rem;
+}
+
+.tournaments .carousel-control-next {
+  width: auto;
+  height: 40px;
+  top: auto;
+  bottom: -5rem;
+  right: 30vw;
+}
+
+.tournaments .carousel-control-prev {
+  width: auto;
+  height: 40px;
+  top: auto;
+  bottom: -5rem;
+  left: 30vw;
+}
+
+
 
 /* Testimonials */
 
@@ -650,6 +699,43 @@ width: 100%;
 
 .works-container .images img{
   margin: 30px 0;
+}
+
+}
+
+
+@media only screen and (min-width:576px) and (max-width:1024px){
+
+  .carousel-inner .carousel-caption p {
+    width: 90%;
+    font-size: 21px;
+    
+}
+
+  .carousel-buttons button {
+    width: 400px;
+    margin: 0 !important;
+  }
+
+  .advantages .row p {
+   margin-top: 3rem;
+    min-height: 330px;
+}
+
+
+  .contact form {
+    margin: 3rem auto 8rem;
+    width: 50% !important;
+}
+
+.works-container .container .row {
+  padding: 2.5rem 4.5rem;
+  height: 40rem;
+
+}
+
+.works-container img {
+  margin-top: 15px;
 }
 
 }
