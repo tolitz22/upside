@@ -191,6 +191,108 @@ p {
   height: 750px;
 }
 
+/* TOURNAMENTS */
+
+.tournaments{
+  background: #191930;
+}
+
+.tournaments h2{
+  color: white;
+  font-size: 24px;
+}
+
+.tournaments p {
+  color: black;
+  font-size: 14px;
+}
+
+.tournaments .prize-container a{
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-family: var(--font-title);
+}
+
+.tournaments .prize-container .title {
+  color: white;
+  font-family: var(--font-title);
+  font-size: 18px;
+}
+.tournaments .prize-container .text .points {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  margin:0 1rem;
+}
+.tournaments .prize-container .text .name {
+  color: white;
+  font-size: 13px;
+  font-weight: 400;
+  
+}
+
+
+
+.tournaments .grand-prize-container {
+  background: linear-gradient(180deg, rgba(35,44,56,1) 0%, rgba(25,25,48,1) 99%);
+  margin: 3rem;
+  padding: 1rem;
+  border-radius: 10px ;
+  
+}
+
+
+.tournaments .card-container{
+  padding: 0 3.5rem;
+}
+
+.card-container .card {
+  border: 3px solid #f9bc2c;
+}
+
+.tournaments .card-container .card-title{
+  min-height: 50px;
+}
+
+.tournaments table{
+  width: 100%;
+}
+
+.tournaments table th,
+.tournaments table td{
+  border-bottom: 1px solid #b0aeae90;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tournaments table th{
+  font-weight: 400;
+  color: #3d3f42;
+}
+
+.tournaments .carousel-control-prev{
+ 
+  width: auto;
+  height: 40px;
+  top: auto;
+  bottom: 3rem;
+  left: 43vw;
+}
+
+.tournaments .carousel-control-next{
+ 
+  width: auto;
+  height: 40px;
+  top: auto;
+  bottom: 3rem;
+  right: 43vw;
+}
+
+
+
+
 /* TESTIMONIALS */
 
 .testimonials p{
