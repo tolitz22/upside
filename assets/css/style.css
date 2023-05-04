@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Russo+One&display=swap");
+
+* {
+  --font-text: "Poppins", sans-serif;
+  --font-title: "Russo One", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-title);
+}
+
+p {
+  font-family: var(--font-text);
+}
+
+/* NAVBAR MENU */
+
+
+
+
+.navbar-nav .nav-item {
+  font-size: 1.3rem;
+  font-family: var(--font-title);
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 400;
+  padding-right: 30px;
+}
+
+.button-nav {
+  position: relative;
+  margin: 0 2rem 0 3rem;
+}
+
+#reponsive-nav {
+  margin: 0 2% 0 10%;
+  font-weight: 700;
+  background: #f9bc2c;
+  width: 100%;
+}
+
+.button-nav .star-1 {
+  position: absolute;
+  width: 18px;
+  top: -20px;
+  left: 75px;
+}
+.button-nav .star-2 {
+  position: absolute;
+  width: 18px;
+  top: 10px;
+  left: -5px;
+}
+.button-nav .star-3 {
+  position: absolute;
+  width: 18px;
+  top: 10px;
+  left: 160px;
+}
+.button-nav .star-4 {
+  position: absolute;
+  width: 18px;
+  top: 40px;
+  left: 75px;
+}
+
+.navbar img {
+  width: 70px;
+  padding: 0.5%;
+}
+
+/* Carousel */
+
+.carousel-caption{
+  position: absolute;
+  top: 5rem;
+  left: 4rem;
+  text-align: left;
+  width: 100%;
+}
+
+.carousel-inner
+
+.carousel-caption p {
+  width: 50%;
+  font-size: 21px;
+  font-family: var(--font-text);
+}
+
+.carousel-caption .slider-buttons .play-now{
+  background: #f9bc2c;
+  border: none;
+  border-radius: 10px;
+  padding:10px 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: var(--font-title);
+}
+.carousel-caption .slider-buttons .get-in{
+  background: #e78035;
+  border: none;
+  border-radius: 10px;
+  padding:10px 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: var(--font-title);
+}
+
+.carousel-indicators{
+  display: none;
+}
+
+.carousel-buttons{
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-buttons button {
+  width: 250px;
+  background:  #875F29;
+  color: #FAD290;
+  border: none;
+  border-radius: 0;
+ font-family: var(--font-title);
+ letter-spacing: 1.5px;
+ font-size: 18px;
+}
+
+.carousel-buttons .btn.active{
+  background: #191930;
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+
+
+/* The Advantages of Upside */
+
+.advantages {
+  margin:5rem 0 10rem 0;
+  width: 98vw;
+  max-width: 2500px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.advantages .row {
+  gap: 3rem 0;
+  width: 100vw;
+}
+.advantages .row p {
+    padding: 0 10%;
+    font-size: 18px;
+
+
+}
+.advantages .row img {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+.advantages .row .img-enter {
+    width: 150px;
+    margin-top: 15%;
+}
+
+
+.advantages .title {
+  margin-bottom: 5%;
+  margin-left: 10%;
+}
+
+.carousel-item {
+  height: 750px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials p{
+    padding: 0 45px;
+}
+
+.contact{
+    background: #191930;
+}
+
+.contact form{
+    margin:3rem auto 8rem;
+}
+
+.contact input{
+    height: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact textarea{
+    height: 9rem;
+}
+
+.contact button{
+    background: #f9bc2c;
+    border: none;
+    color: #000;
+    font-weight: 700;
+}
+
+
+/* FOOTER */
+
+.footer{
+  margin-bottom: 10vh;
+}
+
+.footer h5 {
+  font-weight: 400;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.footer li{
+  list-style: none;
+  text-align: left;
+}
+
+.footer a{
+  text-decoration: none;
+  color: black;
+}
+
+
+/* How it Works Page  */
+
+.claim-banner{
+  background: #191930;
+  color: white;
+  height: 70vh;
+}
+
+.claim-banner a{
+  color: white;
+}
+
+.claim-form-container {
+  background: #e4e4ee;
+}
+
+.claim-form{
+  background: #ffffff;
+
+}
+
+.claim-form form {
+  width: 60%;
+
+}
+
+
+.claim-form form textarea{
+  resize: none;
+  width: 436px;
+  height: 212px;
+  border: 1.5px solid #3d3f423f ;
+  border-radius: 10px;
+ padding: 10px;
+}
+
+.claim-form form button{
+  background: #f9bc2c;
+  font-weight: bold;
+  color: #000;
+  border: none;
+}
+
+.claim-banner p{
+  font-weight: 600;
+}
+
+.band p{
+font-family: var(--font-title);
+font-size: 21px;
+}
+
+
+
+
+
+.works-container {
+  background: #e4e4ee;
+  padding: 1rem 0 5rem 0;
+}
+
+.works-container .container .row{
+  padding: 4.5rem;
+  height: 40rem;
+}
+
+
+
+.works-container .container .row .images-container{
+  align-self: flex-end;
+}
+
+.works-container .right {
+  background: white;
+  margin-right: 0;
+  margin-top: 5rem;
+  max-width: 90vw
+}
+.works-container .left {
+  background: white;
+  margin-left: 0;
+  margin-top: 5rem;
+  max-width: 90vw
+}
+
+.works-container .images{
+  text-align: end;
+}
+
+
+.works-container img{
+  width: 17rem;
+    height: 17rem;
+    background: #d9d9d9;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:575px) {
+/* header */
+
+#reponsive-nav {
+  margin: 20% 0 10% 0;
+}
+
+.button-nav .star-1 {
+  display: none;
+}
+
+.button-nav .star-2 {
+  display: none;
+}
+.button-nav .star-3 {
+  display: none;
+}
+.button-nav .star-4 {
+  display: none;
+}
+
+.navbar img{
+  width: 60px;
+}
+
+
+  /* Carousel */
+  .carousel-item{
+    height: 40rem;
+  }
+
+  .carousel-item img{
+    width: 60rem !important;
+    height: 33rem;
+    margin-left: -17rem;
+  }
+
+  .carousel-caption{
+    display: block !important;
+    top: 1rem;
+    left: 1.5rem;
+  }
+
+  .carousel-caption h2{
+    width: 90%;
+  }
+
+  .carousel-caption p{
+    font-size: 16px !important;
+    width: 90% !important;
+
+  }
+
+
+
+  .carousel-buttons{
+    bottom: -2%;
+  }
+
+  .carousel-buttons button {
+    width: 45vw;
+    font-size: 14px;
+    height: 6vh;
+    margin: 10px 0px 0 5px;
+  }
+
+  .carousel-buttons .btn.active {
+
+  }
+
+
+  /* Advantages */
+
+  .advantages {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+/* Testimonials */
+
+.testimonials .col-lg-12{
+  padding: 0 !important;
+}
+.testimonials .col-lg-3{
+  margin-top: 3rem !important;
+}
+
+.testimonials h2{
+  text-align: center;
+}
+
+
+  .contact form{
+    width: 80% !important;
+    margin: 0rem auto 4rem;
+  }
+
+  .contact form button{
+    width: 10rem;
+    height: 3rem;
+  }
+
+  footer,.footer h5{
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .footer ul{
+    padding: 0;
+  }
+
+  .footer li{
+    text-align: center;
+
+  }
+
+
+  /* Claim Winning page */
+
+  .claim-banner .content{
+    width: 100% !important;
+    padding: 0 5%;
+  }
+
+  .claim-banner .content p,
+  .claim-banner .content h1{
+    text-align: center;
+  }
+
+
+
+  .claim-form form {
+width: 100%;
+
+}
+
+.claim-form form  .w-50,
+.claim-form form .w-25,
+.claim-form form .w-75{
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.claim-form-container {
+  padding: 5rem 0;
+}
+
+/* How it Works */
+
+.band-item{
+  width: 50%;
+}
+
+
+
+.works-banner .image{
+  text-align: center;
+}
+
+.works-banner .text{
+  margin-top: 10%;
+}
+
+.works-banner img{
+  width: 50vw;
+}
+
+.works-container .container .row{
+  padding: 4.5rem 1rem;
+  height: 100%;
+}
+
+.works-container h3{
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.works-container p{
+
+  text-align: center;
+}
+
+.works-container .right {
+  
+  margin-top: 3rem;
+  max-width: 100vw
+}
+.works-container .left {
+  margin-top: 3rem;
+  max-width: 100vw
+}
+
+.works-container .images {
+  text-align: center;
+}
+
+.works-container .images img{
+  margin: 30px 0;
+}
+
+}
