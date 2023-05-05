@@ -456,13 +456,18 @@ font-size: 21px;
 @media only screen and (max-width:575px) {
 /* header */
 
+.navbar-collapse{
+  text-align: center;
+}
+
+
 #reponsive-nav {
   margin: 20% 0 10% 0;
   width: 80%;
 }
 
 .button-nav {
- text-align: center;
+margin: auto;
 }
 
 .button-nav .star-1 {
@@ -514,14 +519,18 @@ font-size: 21px;
 
 
   .carousel-buttons{
-    bottom: -2%;
+    bottom: -5%;
   }
 
   .carousel-buttons button {
     width: 45vw;
     font-size: 14px;
-    height: 6vh;
+    height: 6.5vh;
     margin: 10px 0px 0 5px;
+  }
+
+  .carousel-buttons .btn.active {
+    height: 6.5vh;
   }
 
  
@@ -537,12 +546,23 @@ font-size: 21px;
 
 }
 
+.advantages .title {
+  margin-left: 0;
+}
+
+.advantages .title h2{
+  text-align: center;
+}
+
 .advantages .row p {
   
   min-height: 150px;
   
 }
 
+.advantages .col-lg-3 {
+  margin-top: 5rem;
+}
 
 /* Tournament Prizes */
 
