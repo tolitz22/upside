@@ -458,6 +458,11 @@ font-size: 21px;
 
 #reponsive-nav {
   margin: 20% 0 10% 0;
+  width: 80%;
+}
+
+.button-nav {
+ text-align: center;
 }
 
 .button-nav .star-1 {
@@ -631,7 +636,9 @@ font-size: 21px;
     text-align: center;
   }
 
-
+  .claim-banner {
+    height: 85vh;
+}
 
   .claim-form form {
 width: 100%;
