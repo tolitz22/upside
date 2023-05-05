@@ -441,8 +441,8 @@ font-size: 21px;
 
 
 .works-container img{
-  width: 17rem;
-    height: 17rem;
+  width: 19vw;
+    height: 38vh;
     background: #d9d9d9;
     margin-left: 30px;
 }
@@ -735,6 +735,8 @@ width: 100%;
 
 .works-container .images img{
   margin: 30px 0;
+  width: 19rem;
+    height: 19rem;
 }
 
 }
@@ -772,6 +774,9 @@ width: 100%;
 
 .works-container img {
   margin-top: 15px;
-}
+  
+    width: 17rem;
+      height: 17rem;
+  }
 
 }
