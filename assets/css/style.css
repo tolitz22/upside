@@ -129,6 +129,7 @@ p {
 
 .carousel-buttons button {
  width: 250px;
+ height: 3rem;
  background:  #875F29;
  color: #FAD290;
  border: none;
