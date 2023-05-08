@@ -128,14 +128,21 @@ p {
 }
 
 .carousel-buttons button {
-  width: 250px;
-  background:  #875F29;
-  color: #FAD290;
-  border: none;
-  border-radius: 0;
+ width: 250px;
+ background:  #875F29;
+ color: #FAD290;
+ border: none;
+ border-radius: 0;
  font-family: var(--font-title);
  letter-spacing: 1.5px;
  font-size: 18px;
+ line-height: 15px;
+ border: 3px solid #875F29;
+ border-radius:10px ;
+ -webkit-border-radius:10px ;
+ -moz-border-radius:10px ;
+ -ms-border-radius:10px ;
+ -o-border-radius:10px ;
 }
 
 .carousel-buttons .btn.active{
@@ -535,6 +542,7 @@ margin: auto;
 
   .carousel-buttons .btn.active {
     height: 6.5vh;
+    border: 3px solid #191930;
   }
 
  
@@ -564,8 +572,12 @@ margin: auto;
   
 }
 
-.advantages .col-lg-3 {
-  margin-top: 5rem;
+.advantages .row img {
+width: 150px;
+}
+.advantages .row .img-enter {
+width: 100px;
+margin-bottom: 35px;
 }
 
 /* Tournament Prizes */
