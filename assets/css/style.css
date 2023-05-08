@@ -213,11 +213,13 @@ p {
   font-size: 14px;
 }
 
-.tournaments .prize-container a{
-  text-decoration: none;
+.tournaments .prize-container button{
+ 
   color: white;
   font-size: 14px;
   font-family: var(--font-title);
+  background: none;
+  border: none;
 }
 
 .tournaments .prize-container .title {
@@ -764,12 +766,17 @@ width: 100%;
 
   .carousel-buttons button {
     width: 400px;
-    margin: 0 !important;
+    height: 3rem;
+    margin: 0 10px 10px 0 !important;
   }
 
   .advantages .row p {
    margin-top: 3rem;
     min-height: 330px;
+}
+
+.grand-prize-list{
+  padding: 0;
 }
 
 
