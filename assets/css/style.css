@@ -382,6 +382,7 @@ p {
   background: #e4e4ee;
 }
 
+
 .claim-form{
   background: #ffffff;
 
@@ -413,13 +414,23 @@ p {
   font-weight: 600;
 }
 
+.band a,
 .band p{
 font-family: var(--font-title);
 font-size: 21px;
+text-decoration: none;
+font-weight: 500;
+color: #000;
 }
 
 
+.works-banner{
+  height: 60vh;
+}
 
+.works-banner .text p{
+  font-size: 1.1rem;
+}
 
 
 .works-container {
@@ -442,7 +453,8 @@ font-size: 21px;
   background: white;
   margin-right: 0;
   margin-top: 5rem;
-  max-width: 90vw
+  max-width: 90vw;
+  overflow:hidden;
 }
 .works-container .left {
   background: white;
