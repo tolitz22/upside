@@ -29,7 +29,9 @@ p {
 
 /* NAVBAR MENU */
 
-
+header {
+  padding: 0 3rem;
+}
 
 
 .navbar-nav .nav-item {
@@ -300,8 +302,8 @@ p {
   width: auto;
   height: 40px;
   top: auto;
-  bottom: -3rem;
-  left: 43vw;
+  bottom: -5rem;
+  left: 40vw;
 }
 
 .tournaments .carousel-control-next{
@@ -309,8 +311,8 @@ p {
   width: auto;
   height: 40px;
   top: auto;
-  bottom: -3rem;
-  right: 43vw;
+  bottom: -5rem;
+  right: 40vw;
 }
 
 .tournaments .carousel-inner{
