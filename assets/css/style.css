@@ -7,6 +7,14 @@
   padding: 0;
 }
 
+/* All containers*/
+
+.container{
+  max-width: 90%;
+}
+
+
+
 h1,
 h2,
 h3,
