@@ -333,7 +333,7 @@ header {
 }
 
 .contact form{
-    margin:3rem auto 8rem;
+    margin:3rem auto 1rem;
 }
 
 .contact input{
@@ -350,6 +350,14 @@ header {
     border: none;
     color: #000;
     font-weight: 700;
+}
+
+.contact .success-form{
+    color:#6ef03a
+}
+
+.form-container{
+  padding-bottom: 5rem;
 }
 
 
@@ -381,7 +389,12 @@ header {
 .claim-banner{
   background: #191930;
   color: white;
-  height: 70vh;
+  
+}
+
+.claim-banner .content {
+  width: 90% !important;
+  margin: 7rem 0;
 }
 
 .claim-banner a{
@@ -422,6 +435,7 @@ header {
 
 .claim-banner p{
   font-weight: 600;
+  font-size: 1.4em;
 }
 
 .band a,

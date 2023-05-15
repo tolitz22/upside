@@ -42,3 +42,40 @@ tournamentButton.forEach(function (boton) {
     });
   });
 });
+
+//Send form contact
+
+$(document).ready(function () {
+  $("form").submit(function (event) {
+    event.preventDefault(); // Prevenir la actualización de la página
+
+    // Obtener los valores de los campos
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var comments = $("#comments").val();
+
+    // Enviar la información mediante AJAX
+    $.ajax({
+      type: "POST",
+      url: "process-form.php", // Ruta al archivo PHP que procesará el formulario
+      data: {
+        name: name,
+        email: email,
+        comments: comments,
+      },
+      success: function (response) {
+        var successText = document.getElementsByClassName(
+          "success-form visually-hidden"
+        )[0];
+
+        successText.classList.remove("visually-hidden");
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("Estado:", textStatus);
+        console.log("Error:", errorThrown);
+        // Mostrar mensaje de error
+        alert("Error to send form");
+      },
+    });
+  });
+});

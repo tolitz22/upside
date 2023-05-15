@@ -42,7 +42,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link visually-hidden" href="#">Services</a>
@@ -143,7 +143,9 @@
                   <a href="#contact"
                     ><button class="get-in me-3">Get in Touch</button></a
                   >
-                  <button class="play-now">PLAY NOW</button>
+                  <a href="http://play.upsidegames.com">
+                    <button class="play-now">PLAY NOW</button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -888,13 +890,14 @@
           <div class="col-lg-12 text-white">
             <h3 class="my-5">Get in Touch</h3>
           </div>
-          <div class="col-lg-12 text-center">
-            <form action="contact" class="w-25 form">
+          <div class="col-lg-12 form-container text-center">
+            <form action="#" method="POST" class="w-25 form">
               <div class="mb-3">
                 <input
                   type="text"
                   class="form-control"
                   id="name"
+                  name="name"
                   placeholder="Name"
                 />
               </div>
@@ -902,7 +905,8 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="Email"
+                  id="email"
+                  name="email"
                   aria-describedby="emailHelp"
                   placeholder="Email"
                 />
@@ -911,9 +915,11 @@
                 class="form-control mb-5"
                 placeholder="Any comments ?"
                 id="floatingTextarea"
+                name="comments"
               ></textarea>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit</button> 
             </form>
+            <p class="success-form visually-hidden">Thanks! Your inquiry has been received. We typically respond within 24-72 hours</p>
           </div>
         </div>
       </div>
@@ -929,7 +935,7 @@
                   >Get the app</a
                 >
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item mt-4 dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -969,12 +975,15 @@
             <a href="https://twitter.com/playupsidegames" target="_blank">
               <img src="./assets/img/twitter.svg" alt="" />
             </a>
-            <img src="./assets/img/facebook.svg" alt="" />
+            <a href="https://www.facebook.com/playupside" target="_blank">
+              <img src="./assets/img/facebook.svg" alt="" />
+             </a>
             <img src="./assets/img/linkedin.svg" alt="" />
           </div>
         </div>
       </div>
     </footer>
+   
     <script src="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
