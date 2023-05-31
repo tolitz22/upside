@@ -230,6 +230,10 @@ header {
   font-size: 14px;
 }
 
+.tournaments .prize-container .col-lg-12{
+max-width: 1500px;
+}
+
 .tournaments .prize-container button{
  
   color: white;
@@ -303,7 +307,7 @@ header {
   height: 40px;
   top: auto;
   bottom: -5rem;
-  left: 40vw;
+  left: 40%;
 }
 
 .tournaments .carousel-control-next{
@@ -312,7 +316,7 @@ header {
   height: 40px;
   top: auto;
   bottom: -5rem;
-  right: 40vw;
+  right: 40%;
 }
 
 .tournaments .carousel-inner{
@@ -499,11 +503,30 @@ color: #000;
     margin-left: 30px;
 }
 
+.About-banner {
+  background: #191930;
+  color: #ffffff;
+  padding: 5rem 0;
+  overflow: hidden;
+  
+}
 
+.About-banner .row{
+  justify-content: space-around !important;
+  padding: 0 1rem;
+}
 
+.About-banner .image img{
+  width: 250px;
+}
 
+.our-team{
+  margin-bottom: 10rem;
+}
 
-
+.our-team .row{
+  gap:0 10rem;
+}
 
 @media only screen and (max-width:575px) {
 /* header */
