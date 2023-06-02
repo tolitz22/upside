@@ -3,6 +3,7 @@
 * {
   --font-text: "Poppins", sans-serif;
   --font-title: "Russo One", sans-serif;
+  --paddings-container: 0 10rem;
   margin: 0;
   padding: 0;
 }
@@ -30,7 +31,7 @@ p {
 /* NAVBAR MENU */
 
 header {
-  padding: 0 3rem;
+  padding: var(--paddings-container);
 }
 
 
@@ -89,9 +90,10 @@ header {
 .carousel-caption{
   position: absolute;
   top: 5rem;
-  left: 4rem;
+  left: 0rem;
   text-align: left;
   width: 100%;
+  padding: var(--paddings-container);
 }
 
 .carousel-inner
@@ -187,7 +189,7 @@ header {
 
 .advantages .row {
   gap: 3rem 0;
-  width: 100vw;
+  padding: var(--paddings-container);
 }
 .advantages .row p {
     padding: 0 10%;
@@ -228,6 +230,10 @@ header {
 .tournaments p {
   color: black;
   font-size: 14px;
+}
+
+.tournaments .prize-container {
+  padding: var(--paddings-container);
 }
 
 .tournaments .prize-container .col-lg-12{
@@ -327,10 +333,17 @@ max-width: 1500px;
 
 
 /* TESTIMONIALS */
+.testimonials .row{
+  padding: var(--paddings-container);
+}
+
 
 .testimonials p{
     padding: 0 45px;
 }
+
+
+/* Contact */
 
 .contact{
     background: #191930;
@@ -371,6 +384,11 @@ max-width: 1500px;
   margin-bottom: 10vh;
 }
 
+.footer .row{
+  padding: var(--paddings-container);
+  justify-content: space-between;
+}
+
 .footer h5 {
   font-weight: 400;
   text-align: left;
@@ -396,9 +414,14 @@ max-width: 1500px;
   
 }
 
+.claim-banner .row{
+  padding: var(--paddings-container);
+}
+
 .claim-banner .content {
-  width: 90% !important;
+  width: 100% !important;
   margin: 7rem 0;
+  padding: var(--paddings-container);
 }
 
 .claim-banner a{
@@ -407,12 +430,15 @@ max-width: 1500px;
 
 .claim-form-container {
   background: #e4e4ee;
+  width: 100%;
+  padding: var(--paddings-container);
 }
 
 
 .claim-form{
   background: #ffffff;
-
+  width: 100%;
+  max-width: 100%;
 }
 
 .claim-form form {
@@ -512,8 +538,8 @@ color: #000;
 }
 
 .About-banner .row{
-  justify-content: space-around !important;
-  padding: 0 1rem;
+  justify-content: space-between !important;
+  padding: var(--paddings-container);
 }
 
 .About-banner .image img{
@@ -522,6 +548,7 @@ color: #000;
 
 .our-team{
   margin-bottom: 10rem;
+  padding: var(--paddings-container);
 }
 
 .our-team .row{
@@ -529,6 +556,22 @@ color: #000;
 }
 
 @media only screen and (max-width:575px) {
+
+/* Padding all containers */
+.our-team,
+.About-banner .row,
+.carousel-caption,
+.advantages .row,
+.tournaments .row,
+.testimonials .row,
+.footer .row,
+.claim-banner .row,
+.claim-banner .content,
+.claim-form-container{
+  padding: 0 1rem;
+}
+
+
 /* header */
 
 .navbar-collapse{
@@ -732,7 +775,7 @@ margin-bottom: 35px;
 
   .claim-banner .content{
     width: 100% !important;
-    padding: 0 5%;
+    padding: var(--paddings-container);
   }
 
   .claim-banner .content p,
