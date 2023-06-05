@@ -271,7 +271,7 @@ max-width: 1500px;
 
 .tournaments .grand-prize-container {
   background: linear-gradient(180deg, rgba(35,44,56,1) 0%, rgba(25,25,48,1) 99%);
-  margin: 3rem;
+  margin: 3rem 0;
   padding: 1rem;
   border-radius: 10px ;
   
@@ -329,6 +329,10 @@ max-width: 1500px;
   margin-bottom: 10rem;
 }
 
+
+.tournaments-mobile{
+  display: none;
+}
 
 
 
@@ -730,6 +734,13 @@ margin-bottom: 35px;
   left: 30vw;
 }
 
+.tournaments{
+  display: none;
+}
+
+.tournaments-mobile{
+  display: block;
+}
 
 
 /* Testimonials */
