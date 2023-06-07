@@ -104,7 +104,8 @@ header {
   font-family: var(--font-text);
 }
 
-.carousel-caption .slider-buttons .play-now{
+.carousel-caption .slider-buttons .play-now,
+.carousel-caption .slider-buttons .play-now:visited{
   background: #f9bc2c;
   border: none;
   border-radius: 10px;
@@ -115,7 +116,8 @@ header {
   -o-border-radius: 10px;
   font-family: var(--font-title);
 }
-.carousel-caption .slider-buttons .get-in{
+.carousel-caption .slider-buttons .get-in,
+.carousel-caption .slider-buttons .get-in:visited{
   background: #e78035;
   border: none;
   border-radius: 10px;
@@ -289,6 +291,12 @@ max-width: 1500px;
 .tournaments .card-container .card-title{
   min-height: 50px;
 }
+
+.table-container{
+  max-height: 300px;
+  overflow: auto;
+}
+
 
 .tournaments table{
   width: 100%;
@@ -649,7 +657,7 @@ margin: auto;
   }
 
   .carousel-buttons button {
-    width: 45vw;
+    width: 39vw;
     font-size: 14px;
     height: 6.5vh;
     margin: 10px 0px 0 5px;

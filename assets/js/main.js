@@ -79,3 +79,29 @@ $(document).ready(function () {
     });
   });
 });
+
+
+//Search Tournament Inputs 
+
+const searchInputs = document.querySelectorAll('.search-input');
+
+searchInputs.forEach(input => {
+  input.addEventListener('input', () => handleSearch(input));
+});
+
+function handleSearch(input) {
+  const searchTerm = input.value.toLowerCase();
+  const table = input.parentNode.querySelector('.leaderboard-table');
+  const rows = table.querySelectorAll('tr');
+
+  rows.forEach(row => {
+    const username = row.cells[0].textContent.toLowerCase();
+    if (username.includes(searchTerm)) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+}
+
+

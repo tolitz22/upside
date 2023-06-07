@@ -1,1056 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./assets/img/rectangle_755.svg"
-      type="image/x-icon"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Upside</title>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar w-100 navbar-expand-lg  py-2 bg-white">
-        <div class="container-fluid d-flex">
-          <a href="./index.html">
-            <img src="./assets/img/upside_logo.png" alt="upside logo company" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse justify-content-end navbar-collapse"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./about-us.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link visually-hidden" href="#">Services</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  How it works
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/img/rectangle_755.svg" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Upside</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar w-100 navbar-expand-lg  py-2 bg-white">
+      <div class="container-fluid d-flex">
+        <a href="./index.html">
+          <img src="./assets/img/upside_logo.png" alt="upside logo company" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#leaderboards">Leaderboards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link visually-hidden" href="#">Services</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                How it works
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./how-it-works.html">Partners</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Users</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="button-nav">
+            <a href="./claim-winning.html"><button id="reponsive-nav" type="button" class="btn btn-warning">
+                Claim Winnings
+              </button></a>
+            <img class="star-1" src="./assets/img/star_1.svg" alt="" />
+            <img class="star-2" src="./assets/img/star_1.svg" alt="" />
+            <img class="star-3" src="./assets/img/star_1.svg" alt="" />
+            <img class="star-4" src="./assets/img/star_1.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO  -->
+  <main>
+    <div class="container-fluid">
+      <div id="main-carousel" class="carousel main-carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
+            aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/img/device-screen-with-mobile-app-betting-score-device-with-match-re.svg"
+              class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>The Games Within the Games</h2>
+              <p class="mt-4">
+                Elevate your fandom to the next level with Upside! With both
+                web and mobile platforms, Upside offers unique fantasy
+                challenges around all your favorite college sports. Support
+                your university's alumni association, booster club, athlete
+                unions and more with games and tournaments of your favorite
+                student athletes!
+              </p>
+              <div class="slider-buttons mt-4">
+                <a href="#contact"><button class="get-in me-3">Get in Touch</button></a>
+                <a href="http://play.upsidegames.com">
+                  <button class="play-now">PLAY NOW</button>
                 </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="./how-it-works.html"
-                      >Partners</a
-                    >
-                  </li>
-                  <li><a class="dropdown-item" href="#">Users</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="button-nav">
-              <a href="./claim-winning.html"
-                ><button
-                  id="reponsive-nav"
-                  type="button"
-                  class="btn btn-warning"
-                >
-                  Claim Winnings
-                </button></a
-              >
-              <img class="star-1" src="./assets/img/star_1.svg" alt="" />
-              <img class="star-2" src="./assets/img/star_1.svg" alt="" />
-              <img class="star-3" src="./assets/img/star_1.svg" alt="" />
-              <img class="star-4" src="./assets/img/star_1.svg" alt="" />
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <!-- HERO  -->
-    <main>
-      <div class="container-fluid">
-        <div id="main-carousel" class="carousel main-carousel slide">
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="1"
-              aria-current="true"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="2"
-              aria-current="true"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="3"
-              aria-current="true"
-              aria-label="Slide 4"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="./assets/img/device-screen-with-mobile-app-betting-score-device-with-match-re.svg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h2>The Games Within the Games</h2>
-                <p class="mt-4">
-                  Elevate your fandom to the next level with Upside! With both
-                  web and mobile platforms, Upside offers unique fantasy
-                  challenges around all your favorite college sports. Support
-                  your university's alumni association, booster club, athlete
-                  unions and more with games and tournaments of your favorite
-                  student athletes!
-                </p>
-                <div class="slider-buttons mt-4">
-                  <a href="#contact"
-                    ><button class="get-in me-3">Get in Touch</button></a
-                  >
-                  <a href="http://play.upsidegames.com">
-                    <button class="play-now">PLAY NOW</button>
-                  </a>
-                </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/img/restaurant_2_1.png"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Keep 'Em Coming Back</h2>
-                <p class="mt-4">
-                  From sports bars to Michelin stars, Upside gives your
-                  customers another reason to return. Select unique redeemable
-                  prizes, and give your patrons custom games to play to take
-                  engagement to the next level.
-                </p>
-                <div class="slider-buttons mt-4">
-                  <a href="#contact">
-                    <button class="get-in me-3">Get in Touch</button>
-                  </a>
-                  <a href=""><button class="play-now">PLAY NOW</button></a>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/img/corporate_1.png"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Liven Up Your Workplace</h2>
-                <p class="mt-4">
-                  Nothing boosts employee morale and engagement like play-to-win
-                  competitions. Give your office something to talk about - and
-                  encourage participation with unique prizes that you choose!
-                </p>
-                <div class="slider-buttons mt-4">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/restaurant_2_1.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Keep 'Em Coming Back</h2>
+              <p class="mt-4">
+                From sports bars to Michelin stars, Upside gives your
+                customers another reason to return. Select unique redeemable
+                prizes, and give your patrons custom games to play to take
+                engagement to the next level.
+              </p>
+              <div class="slider-buttons mt-4">
+                <a href="#contact">
                   <button class="get-in me-3">Get in Touch</button>
-                  <button class="play-now">PLAY NOW</button>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/img/organization_1.png"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Do More for Your Organization</h2>
-                <p class="mt-4">
-                  Clubs, unions, associations - whatever the reason for getting
-                  together, get together better with Upside! Let us set up games
-                  and tournament for your organization, and see engagement soar!
-                </p>
-                <div class="slider-buttons mt-4">
-                  <a href="#contact">
-                    <button class="get-in me-3">Get in Touch</button>
-                  </a>
-                  <button class="play-now">PLAY NOW</button>
-                </div>
+                </a>
+                <a href=""><button class="play-now">PLAY NOW</button></a>
               </div>
             </div>
           </div>
-          <div class="carousel-buttons">
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="0"
-              aria-current="true"
-              class="btn me-lg-5 me-sm-3 me-md-0 btn-warning btn-slider active"
-            >
-              Universities
-            </button>
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="1"
-              aria-current="true"
-              class="btn me-lg-5 btn-warning btn-slider"
-            >
-              Restaurants & Bars
-            </button>
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="2"
-              aria-current="true"
-              class="btn me-lg-5 me-sm-3 btn-warning btn-slider"
-            >
-              Corporate
-            </button>
-            <button
-              type="button"
-              data-bs-target="#main-carousel"
-              data-bs-slide-to="3"
-              aria-current="true"
-              class="btn btn-warning btn-slider"
-            >
-              Organization
-            </button>
-          </div>
-        </div>
-      </div>
-      <!--The Advantages of Upside -->
-
-      <div class="container advantages">
-        <div class="row d-flex justify-content-evenly">
-          <div class="col-lg-12 title text-start">
-            <h2 class="">The Advantages of Upside</h2>
-          </div>
-          <div class="col-lg-4">
-            <h3>Partnership</h3>
-            <p class="text-start">
-              Teaming with Upside lets you engage your students, customers,
-              employees, or even friends in creative news ways. Let us build
-              your fantasy challenges, or create your own!
-            </p>
-            <img src="./assets/img/parnership_1.svg" alt="" />
-          </div>
-          <div class="col-lg-4">
-            <h3>Entertainment</h3>
-
-            <p class="text-start">
-              You already love the sports, the teams, the players. Upside helps
-              you create fun and exciting challenges, leveling up the game day
-              experience for your target users.
-            </p>
-
-            <img
-              class="img-enter"
-              src="./assets/img/entertainment_1.svg"
-              alt=""
-            />
-          </div>
-          <div class="col-lg-4">
-            <h3>Engagement</h3>
-            <p class="text-start">
-              With endless possibilities for game day challenges or season-long
-              tournaments, Upside will keep your target users coming back week
-              after week. You provide the prizes, we provide the fun!
-            </p>
-            <img src="./assets/img/money_1.svg" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Our Tournaments Leaderboards Desktop-->
-
-      <div class="container-fluid tournaments">
-        <div class="row justify-content-center prize-container">
-          <div class="col-lg-12 mt-5 ps-lg-5">
-            <h2>Our Tournaments Leaderboards</h2>
-          </div>
-          <div class="col-lg-12 container-prizes">
-            <div class="row">
-              
-
-              
+          <div class="carousel-item">
+            <img src="./assets/img/corporate_1.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Liven Up Your Workplace</h2>
+              <p class="mt-4">
+                Nothing boosts employee morale and engagement like play-to-win
+                competitions. Give your office something to talk about - and
+                encourage participation with unique prizes that you choose!
+              </p>
+              <div class="slider-buttons mt-4">
+                <button class="get-in me-3">Get in Touch</button>
+                <button class="play-now">PLAY NOW</button>
+              </div>
             </div>
           </div>
-
-          <!-- Carousel -->
-          <div class="col-lg-12">
-            <div
-              id="carouselExampleIndicators2"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <!-- First Slide  -->
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">Boston College Leaderboard</h4>
-                          <img src="./assets/img/bcl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>1532</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>1428</td>
-                            </tr>
-                            <tr>
-                              <td>Osuballer3486</td>
-                              <td>1363</td>
-                            </tr>
-                            <tr>
-                              <td>Enjer</td>
-                              <td>1294</td>
-                            </tr>
-
-                            <tr>
-                              <td>Jennygirllx</td>
-                              <td>1264</td>
-                            </tr>
-                            <tr>
-                              <td>Msenge412</td>
-                              <td>1217</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
-                          <img src="./assets/img/ptl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Rattlehead</td>
-                              <td>920</td>
-                            </tr>
-                            <tr>
-                              <td>SuperHeroTo5</td>
-                              <td>780</td>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Freakystud21</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Emgaba</td>
-                              <td>640</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>620</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">N.E Patriots Leaderboard</h4>
-                          <img src="./assets/img/ptl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Rattlehead</td>
-                              <td>920</td>
-                            </tr>
-                            <tr>
-                              <td>SuperHeroTo5</td>
-                              <td>780</td>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Freakystud21</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Emgaba</td>
-                              <td>640</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>620</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div> 
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">Boston College Leaderboard</h4>
-                          <img src="./assets/img/bcl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>1532</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>1428</td>
-                            </tr>
-                            <tr>
-                              <td>Osuballer3486</td>
-                              <td>1363</td>
-                            </tr>
-                            <tr>
-                              <td>Enjer</td>
-                              <td>1294</td>
-                            </tr>
-
-                            <tr>
-                              <td>Jennygirllx</td>
-                              <td>1264</td>
-                            </tr>
-                            <tr>
-                              <td>Msenge412</td>
-                              <td>1217</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
-                          <img src="./assets/img/ptl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Rattlehead</td>
-                              <td>920</td>
-                            </tr>
-                            <tr>
-                              <td>SuperHeroTo5</td>
-                              <td>780</td>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Freakystud21</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Emgaba</td>
-                              <td>640</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>620</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">N.E Patriots Leaderboard</h4>
-                          <img src="./assets/img/ptl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Rattlehead</td>
-                              <td>920</td>
-                            </tr>
-                            <tr>
-                              <td>SuperHeroTo5</td>
-                              <td>780</td>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Freakystud21</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Emgaba</td>
-                              <td>640</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>620</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">Boston College Leaderboard</h4>
-                          <img src="./assets/img/bcl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>1532</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>1428</td>
-                            </tr>
-                            <tr>
-                              <td>Osuballer3486</td>
-                              <td>1363</td>
-                            </tr>
-                            <tr>
-                              <td>Enjer</td>
-                              <td>1294</td>
-                            </tr>
-
-                            <tr>
-                              <td>Jennygirllx</td>
-                              <td>1264</td>
-                            </tr>
-                            <tr>
-                              <td>Msenge412</td>
-                              <td>1217</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
-                          <img src="./assets/img/ptl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Rattlehead</td>
-                              <td>920</td>
-                            </tr>
-                            <tr>
-                              <td>SuperHeroTo5</td>
-                              <td>780</td>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Freakystud21</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Emgaba</td>
-                              <td>640</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>620</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">N.E Patriots Leaderboard</h4>
-                          <img src="./assets/img/ptl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Rattlehead</td>
-                              <td>920</td>
-                            </tr>
-                            <tr>
-                              <td>SuperHeroTo5</td>
-                              <td>780</td>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Freakystud21</td>
-                              <td>760</td>
-                            </tr>
-                            <tr>
-                              <td>Emgaba</td>
-                              <td>640</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>620</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 text-right">
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators2"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+          <div class="carousel-item">
+            <img src="./assets/img/organization_1.png" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Do More for Your Organization</h2>
+              <p class="mt-4">
+                Clubs, unions, associations - whatever the reason for getting
+                together, get together better with Upside! Let us set up games
+                and tournament for your organization, and see engagement soar!
+              </p>
+              <div class="slider-buttons mt-4">
+                <a href="#contact">
+                  <button class="get-in me-3">Get in Touch</button>
+                </a>
+                <button class="play-now">PLAY NOW</button>
               </div>
             </div>
           </div>
         </div>
+        <div class="carousel-buttons">
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" aria-current="true"
+            class="btn me-lg-5 me-sm-3 me-md-0 btn-warning btn-slider active">
+            Universities
+          </button>
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
+            class="btn me-lg-5 btn-warning btn-slider">
+            Restaurants & Bars
+          </button>
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
+            class="btn me-lg-5 me-sm-3 btn-warning btn-slider">
+            Corporate
+          </button>
+          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
+            class="btn btn-warning btn-slider">
+            Organization
+          </button>
+        </div>
       </div>
+    </div>
+    <!--The Advantages of Upside -->
 
-      <!-- Our Tournaments Leaderboards Mobile version -->
-      <div class="container-fluid tournaments tournaments-mobile">
-        <div class="row justify-content-center prize-container">
-          <div class="col-lg-12 mt-5 ps-lg-5">
-            <h2>Our Tournaments Leaderboards</h2>
+    <div class="container advantages">
+      <div class="row d-flex justify-content-evenly">
+        <div class="col-lg-12 title text-start">
+          <h2 class="">The Advantages of Upside</h2>
+        </div>
+        <div class="col-lg-4">
+          <h3>Partnership</h3>
+          <p class="text-start">
+            Teaming with Upside lets you engage your students, customers,
+            employees, or even friends in creative news ways. Let us build
+            your fantasy challenges, or create your own!
+          </p>
+          <img src="./assets/img/parnership_1.svg" alt="" />
+        </div>
+        <div class="col-lg-4">
+          <h3>Entertainment</h3>
+
+          <p class="text-start">
+            You already love the sports, the teams, the players. Upside helps
+            you create fun and exciting challenges, leveling up the game day
+            experience for your target users.
+          </p>
+
+          <img class="img-enter" src="./assets/img/entertainment_1.svg" alt="" />
+        </div>
+        <div class="col-lg-4">
+          <h3>Engagement</h3>
+          <p class="text-start">
+            With endless possibilities for game day challenges or season-long
+            tournaments, Upside will keep your target users coming back week
+            after week. You provide the prizes, we provide the fun!
+          </p>
+          <img src="./assets/img/money_1.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Tournaments Leaderboards Desktop-->
+
+    <div class="container-fluid tournaments" id="leaderboards">
+      <div class="row justify-content-center prize-container">
+        <div class="col-lg-12 mt-5 ps-lg-5">
+          <h2>Our Tournaments Leaderboards</h2>
+        </div>
+        <div class="col-lg-12 container-prizes">
+          <div class="row">
+
+
+
           </div>
-          
+        </div>
 
-          <!-- Carousel -->
-          <div class="col-lg-12">
-            <div
-              id="carouselExampleIndicators3"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <!-- First Slide  -->
-                <div class="carousel-item active">
-                 
-                    <div class="col-md-4 card-container mb-3">
-                      <div class="grand-prize-container text-center">
-                        <p class="title">Tournament Grand Prize</p>
-                        <div class="text d-flex">
-                          <ul class="grand-prize-list">
-                            <li class="d-flex">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                            <li class="d-flex grand-prize-item d-none">
-                              <p class="points">3000 pts</p>
-                              <p class="name">Nantucket Red® polo</p>
-                            </li>
-                          </ul>
-                        </div>
-                        <button class="view-more">View More</button>
-                      </div>
-                      <div class="card">
-                        <div class="card-body text-center">
-                          <h4 class="card-title">Boston College Leaderboard</h4>
-                          <img src="./assets/img/bcl_1.svg" alt="" />
-                          <table class="text-start">
-                            <tr>
-                              <th>Username</th>
-                              <th>Pts</th>
-                            </tr>
-                            <tr>
-                              <td>Matt M</td>
-                              <td>1532</td>
-                            </tr>
-                            <tr>
-                              <td>Dolphox</td>
-                              <td>1428</td>
-                            </tr>
-                            <tr>
-                              <td>Osuballer3486</td>
-                              <td>1363</td>
-                            </tr>
-                            <tr>
-                              <td>Enjer</td>
-                              <td>1294</td>
-                            </tr>
-
-                            <tr>
-                              <td>Jennygirllx</td>
-                              <td>1264</td>
-                            </tr>
-                            <tr>
-                              <td>Msenge412</td>
-                              <td>1217</td>
-                            </tr>
-                          </table>
-                          <p class="mt-5">
-                            Don't see your score? Please double-check your
-                            username in the Profile section of the Upside app.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    
-                 
-                </div>
-                <div class="carousel-item">
+        <!-- Carousel -->
+        <div class="col-lg-12">
+          <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- First Slide  -->
+              <div class="carousel-item active">
+                <div class="row">
                   <div class="col-md-4 card-container mb-3">
                     <div class="grand-prize-container text-center">
                       <p class="title">Tournament Grand Prize</p>
@@ -1078,47 +256,81 @@
                     </div>
                     <div class="card">
                       <div class="card-body text-center">
-                        <h4 class="card-title">N.E Patriots Leaderboard</h4>
-                        <img src="./assets/img/ptl_1.svg" alt="" />
-                        <table class="text-start">
-                          <tr>
-                            <th>Username</th>
-                            <th>Pts</th>
-                          </tr>
-                          <tr>
-                            <td>Rattlehead</td>
-                            <td>920</td>
-                          </tr>
-                          <tr>
-                            <td>SuperHeroTo5</td>
-                            <td>780</td>
-                          </tr>
-                          <tr>
-                            <td>Matt M</td>
-                            <td>760</td>
-                          </tr>
-                          <tr>
-                            <td>Freakystud21</td>
-                            <td>760</td>
-                          </tr>
-                          <tr>
-                            <td>Emgaba</td>
-                            <td>640</td>
-                          </tr>
-                          <tr>
-                            <td>Dolphox</td>
-                            <td>620</td>
-                          </tr>
-                        </table>
+                        <h4 class="card-title">Boston College Leaderboard</h4>
+                        <img src="./assets/img/bcl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                          <table class="text-start leaderboard-table">
+                            <tr>
+                              <th>Username</th>
+                              <th>Pts</th>
+                            </tr>
+                            <tr>
+                              <td>Matt M</td>
+                              <td>1532</td>
+                            </tr>
+                            <tr>
+                              <td>Dolphox</td>
+                              <td>1428</td>
+                            </tr>
+                            <tr>
+                              <td>Osuballer3486</td>
+                              <td>1363</td>
+                            </tr>
+                            <tr>
+                              <td>Enjer</td>
+                              <td>1294</td>
+                            </tr>
+  
+                            <tr>
+                              <td>Jennygirllx</td>
+                              <td>1264</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                            <tr>
+                              <td>Msenge412</td>
+                              <td>1217</td>
+                            </tr>
+                          </table>
+                        </div>
                         <p class="mt-5">
                           Don't see your score? Please double-check your
                           username in the Profile section of the Upside app.
                         </p>
                       </div>
                     </div>
-                  </div> 
-                </div>
-                <div class="carousel-item">
+                  </div>
                   <div class="col-md-4 card-container mb-3">
                     <div class="grand-prize-container text-center">
                       <p class="title">Tournament Grand Prize</p>
@@ -1148,7 +360,9 @@
                       <div class="card-body text-center">
                         <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
                         <img src="./assets/img/ptl_1.svg" alt="" />
-                        <table class="text-start">
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
                           <tr>
                             <th>Username</th>
                             <th>Pts</th>
@@ -1178,6 +392,77 @@
                             <td>620</td>
                           </tr>
                         </table>
+                      </div>
+                        <p class="mt-5">
+                          Don't see your score? Please double-check your
+                          username in the Profile section of the Upside app.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 card-container mb-3">
+                    <div class="grand-prize-container text-center">
+                      <p class="title">Tournament Grand Prize</p>
+                      <div class="text d-flex">
+                        <ul class="grand-prize-list">
+                          <li class="d-flex">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="view-more">View More</button>
+                    </div>
+                    <div class="card">
+
+                      <div class="card-body text-center">
+                        <h4 class="card-title">N.E Patriots Leaderboard</h4>
+                        <img src="./assets/img/ptl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
+                          <tr>
+                            <th>Username</th>
+                            <th>Pts</th>
+                          </tr>
+                          <tr>
+                            <td>Rattlehead</td>
+                            <td>920</td>
+                          </tr>
+                          <tr>
+                            <td>SuperHeroTo5</td>
+                            <td>780</td>
+                          </tr>
+                          <tr>
+                            <td>Matt M</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Freakystud21</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Emgaba</td>
+                            <td>640</td>
+                          </tr>
+                          <tr>
+                            <td>Dolphox</td>
+                            <td>620</td>
+                          </tr>
+                        </table>
+                      </div>
                         <p class="mt-5">
                           Don't see your score? Please double-check your
                           username in the Profile section of the Upside app.
@@ -1186,208 +471,853 @@
                     </div>
                   </div>
                 </div>
-               
               </div>
-              <div class="col-6 text-right">
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators3"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators3"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4 card-container mb-3">
+
+                    <div class="grand-prize-container text-center">
+                      <p class="title">Tournament Grand Prize</p>
+                      <div class="text d-flex">
+                        <ul class="grand-prize-list">
+                          <li class="d-flex">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="view-more">View More</button>
+                    </div>
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <h4 class="card-title">Boston College Leaderboard</h4>
+                        <img src="./assets/img/bcl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
+                          <tr>
+                            <th>Username</th>
+                            <th>Pts</th>
+                          </tr>
+                          <tr>
+                            <td>Matt M</td>
+                            <td>1532</td>
+                          </tr>
+                          <tr>
+                            <td>Dolphox</td>
+                            <td>1428</td>
+                          </tr>
+                          <tr>
+                            <td>Osuballer3486</td>
+                            <td>1363</td>
+                          </tr>
+                          <tr>
+                            <td>Enjer</td>
+                            <td>1294</td>
+                          </tr>
+
+                          <tr>
+                            <td>Jennygirllx</td>
+                            <td>1264</td>
+                          </tr>
+                          <tr>
+                            <td>Msenge412</td>
+                            <td>1217</td>
+                          </tr>
+                        </table>
+                        </div>
+                        <p class="mt-5">
+                          Don't see your score? Please double-check your
+                          username in the Profile section of the Upside app.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 card-container mb-3">
+                    <div class="grand-prize-container text-center">
+                      <p class="title">Tournament Grand Prize</p>
+                      <div class="text d-flex">
+                        <ul class="grand-prize-list">
+                          <li class="d-flex">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="view-more">View More</button>
+                    </div>
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
+                        <img src="./assets/img/ptl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
+                          <tr>
+                            <th>Username</th>
+                            <th>Pts</th>
+                          </tr>
+                          <tr>
+                            <td>Rattlehead</td>
+                            <td>920</td>
+                          </tr>
+                          <tr>
+                            <td>SuperHeroTo5</td>
+                            <td>780</td>
+                          </tr>
+                          <tr>
+                            <td>Matt M</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Freakystud21</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Emgaba</td>
+                            <td>640</td>
+                          </tr>
+                          <tr>
+                            <td>Dolphox</td>
+                            <td>620</td>
+                          </tr>
+                        </table>
+                      </div>
+                        <p class="mt-5">
+                          Don't see your score? Please double-check your
+                          username in the Profile section of the Upside app.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 card-container mb-3">
+                    <div class="grand-prize-container text-center">
+                      <p class="title">Tournament Grand Prize</p>
+                      <div class="text d-flex">
+                        <ul class="grand-prize-list">
+                          <li class="d-flex">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="view-more">View More</button>
+                    </div>
+                    <div class="card">
+
+                      <div class="card-body text-center">
+                        <h4 class="card-title">N.E Patriots Leaderboard</h4>
+                        <img src="./assets/img/ptl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
+                          <tr>
+                            <th>Username</th>
+                            <th>Pts</th>
+                          </tr>
+                          <tr>
+                            <td>Rattlehead</td>
+                            <td>920</td>
+                          </tr>
+                          <tr>
+                            <td>SuperHeroTo5</td>
+                            <td>780</td>
+                          </tr>
+                          <tr>
+                            <td>Matt M</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Freakystud21</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Emgaba</td>
+                            <td>640</td>
+                          </tr>
+                          <tr>
+                            <td>Dolphox</td>
+                            <td>620</td>
+                          </tr>
+                        </table>
+                      </div>
+                        <p class="mt-5">
+                          Don't see your score? Please double-check your
+                          username in the Profile section of the Upside app.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-4 card-container mb-3">
+
+                    <div class="grand-prize-container text-center">
+                      <p class="title">Tournament Grand Prize</p>
+                      <div class="text d-flex">
+                        <ul class="grand-prize-list">
+                          <li class="d-flex">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="view-more">View More</button>
+                    </div>
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <h4 class="card-title">Boston College Leaderboard</h4>
+                        <img src="./assets/img/bcl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
+                          <tr>
+                            <th>Username</th>
+                            <th>Pts</th>
+                          </tr>
+                          <tr>
+                            <td>Matt M</td>
+                            <td>1532</td>
+                          </tr>
+                          <tr>
+                            <td>Dolphox</td>
+                            <td>1428</td>
+                          </tr>
+                          <tr>
+                            <td>Osuballer3486</td>
+                            <td>1363</td>
+                          </tr>
+                          <tr>
+                            <td>Enjer</td>
+                            <td>1294</td>
+                          </tr>
+
+                          <tr>
+                            <td>Jennygirllx</td>
+                            <td>1264</td>
+                          </tr>
+                          <tr>
+                            <td>Msenge412</td>
+                            <td>1217</td>
+                          </tr>
+                        </table>
+                        </div>
+                        <p class="mt-5">
+                          Don't see your score? Please double-check your
+                          username in the Profile section of the Upside app.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 card-container mb-3">
+                    <div class="grand-prize-container text-center">
+                      <p class="title">Tournament Grand Prize</p>
+                      <div class="text d-flex">
+                        <ul class="grand-prize-list">
+                          <li class="d-flex">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="view-more">View More</button>
+                    </div>
+                    <div class="card">
+                      <div class="card-body text-center">
+                        <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
+                        <img src="./assets/img/ptl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
+                          <tr>
+                            <th>Username</th>
+                            <th>Pts</th>
+                          </tr>
+                          <tr>
+                            <td>Rattlehead</td>
+                            <td>920</td>
+                          </tr>
+                          <tr>
+                            <td>SuperHeroTo5</td>
+                            <td>780</td>
+                          </tr>
+                          <tr>
+                            <td>Matt M</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Freakystud21</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Emgaba</td>
+                            <td>640</td>
+                          </tr>
+                          <tr>
+                            <td>Dolphox</td>
+                            <td>620</td>
+                          </tr>
+                        </table>
+                        </div>
+                        <p class="mt-5">
+                          Don't see your score? Please double-check your
+                          username in the Profile section of the Upside app.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 card-container mb-3">
+                    <div class="grand-prize-container text-center">
+                      <p class="title">Tournament Grand Prize</p>
+                      <div class="text d-flex">
+                        <ul class="grand-prize-list">
+                          <li class="d-flex">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                          <li class="d-flex grand-prize-item d-none">
+                            <p class="points">3000 pts</p>
+                            <p class="name">Nantucket Red® polo</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <button class="view-more">View More</button>
+                    </div>
+                    <div class="card">
+
+                      <div class="card-body text-center">
+                        <h4 class="card-title">N.E Patriots Leaderboard</h4>
+                        <img src="./assets/img/ptl_1.svg" alt="" />
+                        <input type="text" class="search-input" placeholder="Search">
+                        <div class="table-container">
+                        <table class="text-start leaderboard-table">
+                          <tr>
+                            <th>Username</th>
+                            <th>Pts</th>
+                          </tr>
+                          <tr>
+                            <td>Rattlehead</td>
+                            <td>920</td>
+                          </tr>
+                          <tr>
+                            <td>SuperHeroTo5</td>
+                            <td>780</td>
+                          </tr>
+                          <tr>
+                            <td>Matt M</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Freakystud21</td>
+                            <td>760</td>
+                          </tr>
+                          <tr>
+                            <td>Emgaba</td>
+                            <td>640</td>
+                          </tr>
+                          <tr>
+                            <td>Dolphox</td>
+                            <td>620</td>
+                          </tr>
+                        </table>
+                        </div>
+                        <p class="mt-5">
+                          Don't see your score? Please double-check your
+                          username in the Profile section of the Upside app.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 text-right">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      
+    </div>
 
-      <!-- TESTIMONIALS -->
-
-      <div class="container-fluid testimonials my-5">
-        <div class="row justify-content-evenly">
-          <div class="col-lg-12 my-5 text-sm-center ps-5">
-            <h2 class="">Testimonial</h2>
-          </div>
-          <div class="col-lg-3 text-center">
-            <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
-            <p class="mt-4 text-start">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </p>
-            <img
-              class="mt-2"
-              src="./assets/img/rating.svg"
-              alt=""
-              width="130px"
-            />
-          </div>
-          <div class="col-lg-3 text-center">
-            <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
-            <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </p>
-            <img
-              class="mt-2"
-              src="./assets/img/rating.svg"
-              alt=""
-              width="130px"
-            />
-          </div>
-          <div class="col-lg-3 text-center">
-            <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
-            <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </p>
-            <img
-              class="mt-2"
-              src="./assets/img/rating.svg"
-              alt=""
-              width="130px"
-            />
-          </div>
-          <div class="col-lg-3 text-center">
-            <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
-            <p class="mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </p>
-            <img
-              class="mt-2"
-              src="./assets/img/rating.svg"
-              alt=""
-              width="130px"
-            />
-          </div>
+    <!-- Our Tournaments Leaderboards Mobile version -->
+    <div class="container-fluid tournaments tournaments-mobile">
+      <div class="row justify-content-center prize-container">
+        <div class="col-lg-12 mt-5 ps-lg-5">
+          <h2>Our Tournaments Leaderboards</h2>
         </div>
-      </div>
 
-      <!-- FORM CONTACT -->
-      <div id="contact" class="container-fluid contact text-center">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-white">
-            <h3 class="my-5">Get in Touch</h3>
-          </div>
-          <div class="col-lg-12 form-container text-center">
-            <form action="#" method="POST" class="w-25 form">
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  name="name"
-                  placeholder="Name"
-                />
+
+        <!-- Carousel -->
+        <div class="col-lg-12">
+          <div id="carouselExampleIndicators3" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              
+              <div class="carousel-item active">
+
+                <div class="col-md-4 card-container mb-3">
+                  <div class="grand-prize-container text-center">
+                    <p class="title">Tournament Grand Prize</p>
+                    <div class="text d-flex">
+                      <ul class="grand-prize-list">
+                        <li class="d-flex">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="view-more">View More</button>
+                  </div>
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Boston College Leaderboard</h4>
+                      <img src="./assets/img/bcl_1.svg" alt="" />
+                       <input type="text" class="search-input" placeholder="Search">
+                       <div class="table-container">
+                       <table class="text-start leaderboard-table">
+                        <tr>
+                          <th>Username</th>
+                          <th>Pts</th>
+                        </tr>
+                        <tr>
+                          <td>Matt M</td>
+                          <td>1532</td>
+                        </tr>
+                        <tr>
+                          <td>Dolphox</td>
+                          <td>1428</td>
+                        </tr>
+                        <tr>
+                          <td>Osuballer3486</td>
+                          <td>1363</td>
+                        </tr>
+                        <tr>
+                          <td>Enjer</td>
+                          <td>1294</td>
+                        </tr>
+
+                        <tr>
+                          <td>Jennygirllx</td>
+                          <td>1264</td>
+                        </tr>
+                        <tr>
+                          <td>Msenge412</td>
+                          <td>1217</td>
+                        </tr>
+                      </table>
+                      </div>
+                      <p class="mt-5">
+                        Don't see your score? Please double-check your
+                        username in the Profile section of the Upside app.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+
+
               </div>
-              <div>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  name="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Email"
-                />
+              <div class="carousel-item">
+                <div class="col-md-4 card-container mb-3">
+                  <div class="grand-prize-container text-center">
+                    <p class="title">Tournament Grand Prize</p>
+                    <div class="text d-flex">
+                      <ul class="grand-prize-list">
+                        <li class="d-flex">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="view-more">View More</button>
+                  </div>
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">N.E Patriots Leaderboard</h4>
+                      <img src="./assets/img/ptl_1.svg" alt="" />
+                      <input type="text" class="search-input" placeholder="Search">
+                      <div class="table-container">
+                      <table class="text-start leaderboard-table">
+                        <tr>
+                          <th>Username</th>
+                          <th>Pts</th>
+                        </tr>
+                        <tr>
+                          <td>Rattlehead</td>
+                          <td>920</td>
+                        </tr>
+                        <tr>
+                          <td>SuperHeroTo5</td>
+                          <td>780</td>
+                        </tr>
+                        <tr>
+                          <td>Matt M</td>
+                          <td>760</td>
+                        </tr>
+                        <tr>
+                          <td>Freakystud21</td>
+                          <td>760</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Dolphox</td>
+                          <td>620</td>
+                        </tr>
+                      </table>
+                      </div>
+                      <p class="mt-5">
+                        Don't see your score? Please double-check your
+                        username in the Profile section of the Upside app.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <textarea
-                class="form-control mb-5"
-                placeholder="Any comments ?"
-                id="floatingTextarea"
-                name="comments"
-              ></textarea>
-              <button type="submit" class="btn btn-primary">Submit</button> 
-            </form>
-            <p class="success-form visually-hidden">Thanks! Your inquiry has been received. We typically respond within 24-72 hours</p>
+              <div class="carousel-item">
+
+
+                <div class="col-md-4 card-container mb-3">
+                  <div class="grand-prize-container text-center">
+                    <p class="title">Tournament Grand Prize</p>
+                    <div class="text d-flex">
+                      <ul class="grand-prize-list">
+                        <li class="d-flex">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                        <li class="d-flex grand-prize-item d-none">
+                          <p class="points">3000 pts</p>
+                          <p class="name">Nantucket Red® polo</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <button class="view-more">View More</button>
+                  </div>
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
+                      <img src="./assets/img/ptl_1.svg" alt="" />
+                      <input type="text" class="search-input" placeholder="Search">
+                      <div class="table-container">
+                      <table class="text-start leaderboard-table">
+                        <tr>
+                          <th>Username</th>
+                          <th>Pts</th>
+                        </tr>
+                        <tr>
+                          <td>Rattlehead</td>
+                          <td>920</td>
+                        </tr>
+                        <tr>
+                          <td>SuperHeroTo5</td>
+                          <td>780</td>
+                        </tr>
+                        <tr>
+                          <td>Matt M</td>
+                          <td>760</td>
+                        </tr>
+                        <tr>
+                          <td>Freakystud21</td>
+                          <td>760</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Emgaba</td>
+                          <td>640</td>
+                        </tr>
+                        <tr>
+                          <td>Dolphox</td>
+                          <td>620</td>
+                        </tr>
+                      </table>
+                      </div>
+                      <p class="mt-5">
+                        Don't see your score? Please double-check your
+                        username in the Profile section of the Upside app.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-6 text-right">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="container-fluid footer">
-        <div class="row">
-          <div class="col-lg-2">
-            <h5 class="mt-5">Getting Started</h5>
-            <ul>
-              <li class="mt-4">
-                <a href="http://play.upsidegames.com" target="_blank"
-                  >Get the app</a
-                >
-              </li>
-              <li class="nav-item mt-4 dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  How it works
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="./how-it-works.html"
-                      >Partners</a
-                    >
-                  </li>
-                  <li><a class="dropdown-item" href="#">Users</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-2">
-            <h5 class="mt-5">Company</h5>
-            <ul>
-              <li class="mt-4"><a href="./about-us.html">About Us</a></li>
-              <li class="mt-4"><a href="#">News</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2">
-            <h5 class="mt-5">Contact</h5>
-            <ul>
-              <li class="mt-4"><a href="#">Support Home</a></li>
-              <li class="mt-4"><a href="#contact">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 mt-5">
-            <img src="./assets/img/instagram.svg" alt="" />
-            <a href="https://twitter.com/playupsidegames" target="_blank">
-              <img src="./assets/img/twitter.svg" alt="" />
-            </a>
-            <a href="https://www.facebook.com/playupside" target="_blank">
-              <img src="./assets/img/facebook.svg" alt="" />
-             </a>
-            <img src="./assets/img/linkedin.svg" alt="" />
-          </div>
+    </div>
+
+
+    <!-- TESTIMONIALS -->
+
+    <div class="container-fluid testimonials my-5">
+      <div class="row justify-content-evenly">
+        <div class="col-lg-12 my-5 text-sm-center ps-5">
+          <h2 class="">Testimonial</h2>
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
+          <p class="mt-4 text-start">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt
+          </p>
+          <img class="mt-2" src="./assets/img/rating.svg" alt="" width="130px" />
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
+          <p class="mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt
+          </p>
+          <img class="mt-2" src="./assets/img/rating.svg" alt="" width="130px" />
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
+          <p class="mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt
+          </p>
+          <img class="mt-2" src="./assets/img/rating.svg" alt="" width="130px" />
+        </div>
+        <div class="col-lg-3 text-center">
+          <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
+          <p class="mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt
+          </p>
+          <img class="mt-2" src="./assets/img/rating.svg" alt="" width="130px" />
         </div>
       </div>
-    </footer>
-   
-    <script src="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/main.js"></script>
-  </body>
+    </div>
+
+    <!-- FORM CONTACT -->
+    <div id="contact" class="container-fluid contact text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-white">
+          <h3 class="my-5">Get in Touch</h3>
+        </div>
+        <div class="col-lg-12 form-container text-center">
+          <form action="#" method="POST" class="w-25 form">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+            </div>
+            <div>
+              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                placeholder="Email" />
+            </div>
+            <textarea class="form-control mb-5" placeholder="Any comments ?" id="floatingTextarea"
+              name="comments"></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <p class="success-form visually-hidden">Thanks! Your inquiry has been received. We typically respond within
+            24-72 hours</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container-fluid footer">
+      <div class="row">
+        <div class="col-lg-2">
+          <h5 class="mt-5">Getting Started</h5>
+          <ul>
+            <li class="mt-4">
+              <a href="http://play.upsidegames.com" target="_blank">Get the app</a>
+            </li>
+            <li class="nav-item mt-4 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                How it works
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./how-it-works.html">Partners</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Users</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h5 class="mt-5">Company</h5>
+          <ul>
+            <li class="mt-4"><a href="./about-us.html">About Us</a></li>
+            <li class="mt-4"><a href="#">News</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h5 class="mt-5">Contact</h5>
+          <ul>
+            <li class="mt-4"><a href="#">Support Home</a></li>
+            <li class="mt-4"><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 mt-5">
+          <img src="./assets/img/instagram.svg" alt="" />
+          <a href="https://twitter.com/playupsidegames" target="_blank">
+            <img src="./assets/img/twitter.svg" alt="" />
+          </a>
+          <a href="https://www.facebook.com/playupside" target="_blank">
+            <img src="./assets/img/facebook.svg" alt="" />
+          </a>
+          <img src="./assets/img/linkedin.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>
