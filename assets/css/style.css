@@ -420,28 +420,31 @@ max-width: 1500px;
 
 /* How it Works Page  */
 
-.claim-banner{
-  background: #191930;
-  color: white;
-  
-}
 
-.claim-banner .row{
-  padding: var(--paddings-container);
-}
 
-.claim-banner .content {
+
+.claim-form-container .content {
   width: 100% !important;
-  margin: 7rem 0;
-  padding: var(--paddings-container);
+  margin: 7rem 0 0;
+ 
 }
 
-.claim-banner a{
-  color: white;
+.claim-form-container .content h1{
+  text-align: center;
+  font-size: 4em;
+  color: #f9bc2c;
+}
+
+.claim-form-container .content p{
+  font-size: 1.1em;
+}
+
+.claim-form-container a{
+  color: #000;
 }
 
 .claim-form-container {
-  background: #e4e4ee;
+  background: #fff;
   width: 100%;
   padding: var(--paddings-container);
 }
@@ -556,6 +559,8 @@ color: #000;
 
 .About-banner .image img{
   width: 250px;
+  top: 3vw;
+  left: 17vw;
 }
 
 .our-team{
@@ -796,14 +801,12 @@ margin-bottom: 35px;
 
   /* Claim Winning page */
 
-  .claim-banner .content{
-    width: 100% !important;
-    padding: var(--paddings-container);
-  }
+  
 
-  .claim-banner .content p,
-  .claim-banner .content h1{
+  .claim-form-container .content p,
+  .claim-form-container .content h1{
     text-align: center;
+    padding: 0 10px;
   }
 
   .claim-banner {
