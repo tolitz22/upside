@@ -476,7 +476,7 @@ max-width: 1500px;
 }
 
 .claim-banner p{
-  font-weight: 600;
+  
   font-size: 1.4em;
 }
 
@@ -585,6 +585,10 @@ color: #000;
 
 
 /* header */
+
+header{
+  padding: 0;
+}
 
 .navbar-collapse{
   text-align: center;
