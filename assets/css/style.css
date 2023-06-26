@@ -119,6 +119,7 @@ header {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   font-family: var(--font-title);
+  -webkit-tap-highlight-color: transparent;
 }
 .carousel-caption .slider-buttons .get-in,
 .carousel-caption .slider-buttons .get-in:visited{
@@ -131,31 +132,21 @@ header {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   font-family: var(--font-title);
+ 
 }
 
-.carousel-caption .slider-buttons .play-now,
-.carousel-caption .slider-buttons .play-now:visited {
+.carousel-caption .slider-buttons a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: #f9bc2c; /* Cambia esto al color deseado para el botón "play-now" */
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
   font-family: var(--font-title);
+  -webkit-tap-highlight-color: transparent;
 }
 
-.carousel-caption .slider-buttons .get-in,
-.carousel-caption .slider-buttons .get-in:visited {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: #e78035; /* Cambia esto al color deseado para el botón "play-now" */
-  border: none;
-  border-radius: 10px;
-  padding: 10px 15px;
-  font-family: var(--font-title);
-}
+
 
 /* Restaurar el estilo predeterminado para los botones en otros dispositivos */
 @media (hover: hover) {
