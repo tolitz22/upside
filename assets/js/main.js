@@ -105,3 +105,26 @@ function handleSearch(input) {
 }
 
 
+
+  // Espera a que se cargue el documento
+  document.addEventListener('DOMContentLoaded', function() {
+    // Obtén el enlace "Leaderboards"
+    var leaderboardsLink = document.getElementById('leaderboards-link');
+    
+    // Agrega un evento de clic al enlace
+    leaderboardsLink.addEventListener('click', function(e) {
+      e.preventDefault(); // Evita el comportamiento de enlace predeterminado
+      
+      // Obtén el destino del enlace
+      var target = document.querySelector(this.getAttribute('href'));
+      
+      // Calcula la posición del destino en relación con la ventana
+      var offset = target.getBoundingClientRect().top + window.pageYOffset;
+      
+      // Realiza el desplazamiento suave utilizando animaciones de JavaScript
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+    });
+  });

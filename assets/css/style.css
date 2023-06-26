@@ -87,6 +87,10 @@ header {
 
 /* Carousel */
 
+.banner-home{
+  padding: 0;
+}
+
 .carousel-caption{
   position: absolute;
   top: 5rem;
@@ -128,6 +132,43 @@ header {
   -o-border-radius: 10px;
   font-family: var(--font-title);
 }
+
+.carousel-caption .slider-buttons .play-now,
+.carousel-caption .slider-buttons .play-now:visited {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #f9bc2c; /* Cambia esto al color deseado para el botón "play-now" */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-family: var(--font-title);
+}
+
+.carousel-caption .slider-buttons .get-in,
+.carousel-caption .slider-buttons .get-in:visited {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #e78035; /* Cambia esto al color deseado para el botón "play-now" */
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-family: var(--font-title);
+}
+
+/* Restaurar el estilo predeterminado para los botones en otros dispositivos */
+@media (hover: hover) {
+  .carousel-caption .slider-buttons .play-now,
+  .carousel-caption .slider-buttons .play-now:visited,
+  .carousel-caption .slider-buttons .get-in,
+  .carousel-caption .slider-buttons .get-in:visited {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+  }
+}
+
 
 .carousel-indicators{
   display: none;
@@ -432,7 +473,7 @@ max-width: 1500px;
 .claim-form-container .content h1{
   text-align: center;
   font-size: 4em;
-  color: #f9bc2c;
+  color: #F47128;
 }
 
 .claim-form-container .content p{
