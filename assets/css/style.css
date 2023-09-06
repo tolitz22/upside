@@ -149,7 +149,7 @@ header {
 
 
 /* Restaurar el estilo predeterminado para los botones en otros dispositivos */
-@media (hover: hover) {
+@media screen and (-webkit-min-device-pixel-ratio:0) {
   .carousel-caption .slider-buttons .play-now,
   .carousel-caption .slider-buttons .play-now:visited,
   .carousel-caption .slider-buttons .get-in,
@@ -157,6 +157,7 @@ header {
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
+    color: #000;
   }
 }
 
