@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&family=Russo+One&display=swap");
 
+
+
 * {
   --font-text: "Poppins", sans-serif;
   --font-title: "Russo One", sans-serif;
@@ -14,7 +16,23 @@
   max-width: 90%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+  margin: 0; /* Remove default body margin */
+}
 
+main {
+  flex: 1; /* Make the content area flexible to take up remaining space */
+}
+
+footer {
+  flex-shrink: 0; /* Prevent the footer from shrinking */
+  background-color: #EDEEF1; /* Example background color */
+  /* color: #fff; Example text color */
+  /* padding: 20px; */
+}
 
 h1,
 h2,
@@ -31,7 +49,7 @@ p {
 /* NAVBAR MENU */
 
 header {
-  padding: var(--paddings-container);
+  padding: 0 3rem;
 }
 
 
@@ -43,19 +61,62 @@ header {
   padding-right: 30px;
 }
 
-.button-nav {
+/* .button-nav {
   position: relative;
   margin: 0 2rem 0 3rem;
 }
+ */
+
+ .button-nav {
+  position: relative;
+  display: inline-block;
+}
+
+
+.star-1,
+  .star-2,
+  .star-3,
+  .star-4 {   
+    width: 18px !important; /* Adjust size as needed */ 
+  }
+
+.star-1 {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  width: 18px !important;
+  transform: translateY(-50%);
+}
+
+.star-2 {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.star-3 {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.star-4 {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 #reponsive-nav {
-  margin: 0 2% 0 10%;
+  /* margin: 0 2% 0 10%; */
   font-weight: 700;
   background: #f9bc2c;
   width: 100%;
 }
 
-.button-nav .star-1 {
+/* .button-nav .star-1 {
   position: absolute;
   width: 18px;
   top: -20px;
@@ -78,7 +139,7 @@ header {
   width: 18px;
   top: 40px;
   left: 75px;
-}
+} */
 
 .navbar img {
   width: 70px;
@@ -97,7 +158,7 @@ header {
   left: 0rem;
   text-align: left;
   width: 100%;
-  padding: var(--paddings-container);
+  padding: 0 3.5rem;
 }
 
 .carousel-inner
@@ -141,7 +202,7 @@ header {
   appearance: none;
   border: none;
   border-radius: 10px;
-  padding: 10px 15px;
+  /* padding: 10px 15px; */
   font-family: var(--font-title);
   -webkit-tap-highlight-color: transparent;
 }
@@ -215,7 +276,7 @@ header {
 /* The Advantages of Upside */
 
 .advantages {
-  margin:5rem 0 10rem 0;
+  margin:4rem 0 10rem 0;
   width: 98vw;
   max-width: 2500px;
   overflow: hidden;
@@ -224,7 +285,7 @@ header {
 
 .advantages .row {
   gap: 3rem 0;
-  padding: var(--paddings-container);
+  padding: 0 4rem;
 }
 .advantages .row p {
     padding: 0 10%;
@@ -268,7 +329,11 @@ header {
 }
 
 .tournaments .prize-container {
-  padding: var(--paddings-container);
+  /* padding: var(--paddings-container); */
+}
+
+.our-tournament-text{
+  padding:  1.5rem 2.5rem;
 }
 
 .tournaments .prize-container .col-lg-12{
@@ -306,7 +371,7 @@ max-width: 1500px;
 
 .tournaments .grand-prize-container {
   background: linear-gradient(180deg, rgba(35,44,56,1) 0%, rgba(25,25,48,1) 99%);
-  margin: 3rem 0;
+  /* margin: 3rem 0; */
   padding: 1rem;
   border-radius: 10px ;
   
@@ -314,7 +379,7 @@ max-width: 1500px;
 
 
 .tournaments .card-container{
-  padding: 0 3.5rem;
+  padding: 0 3rem;
 }
 
 .card-container .card {
@@ -375,11 +440,21 @@ max-width: 1500px;
   display: none;
 }
 
+/* The advantages of upside */
+.advantage-text{
+  text-align: left;
+  padding: 0rem 2.5rem;
+}
 
+
+.testimonials{
+  padding-bottom: 4rem;
+  padding-top: 3rem;
+}
 
 /* TESTIMONIALS */
 .testimonials .row{
-  padding: var(--paddings-container);
+  /* padding: var(--paddings-container); */
 }
 
 
@@ -427,10 +502,11 @@ max-width: 1500px;
 
 .footer{
   margin-bottom: 10vh;
+  background-color: #EDEEF1;
 }
 
 .footer .row{
-  padding: var(--paddings-container);
+  /* padding: var(--paddings-container); */
   justify-content: space-between;
 }
 
@@ -580,14 +656,14 @@ color: #000;
 .About-banner {
   background: #191930;
   color: #ffffff;
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   overflow: hidden;
   
 }
 
 .About-banner .row{
   justify-content: space-between !important;
-  padding: var(--paddings-container);
+  padding: 3rem 3.5rem;
 }
 
 .About-banner .image img{
@@ -596,7 +672,7 @@ color: #000;
   left: 17vw;
 }
 
-.our-team{
+.team{
   margin-bottom: 10rem;
   padding: var(--paddings-container);
 }
@@ -605,10 +681,12 @@ color: #000;
   gap:0 10rem;
 }
 
+.our-team{
+  padding: 0 3.5rem;
+}
 @media only screen and (max-width:575px) {
 
 /* Padding all containers */
-.our-team,
 .About-banner .row,
 .carousel-caption,
 .advantages .row,
@@ -634,9 +712,10 @@ header{
 
 
 #reponsive-nav {
-  margin: 20% 0 10% 0;
-  width: 80%;
+  /* margin: 20% 0 10% 0; */
+  /* width: 80%; */
 }
+
 
 .button-nav {
 margin: auto;
@@ -678,7 +757,7 @@ margin: auto;
 
   .main-carousel .carousel-caption{
     display: block !important;
-    top: 1rem;
+    top: 5rem;
     left: 1.5rem;
   }
 
@@ -695,7 +774,7 @@ margin: auto;
 
 
   .carousel-buttons{
-    bottom: -5%;
+    bottom: -6%;
   }
 
   .carousel-buttons button {

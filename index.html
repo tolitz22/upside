@@ -14,7 +14,7 @@
 
 <body>
   <header>
-    <nav class="navbar w-100 navbar-expand-lg  py-2 bg-white">
+    <nav class="navbar navbar-expand-lg bg-white">
       <div class="container-fluid d-flex">
         <a href="./index.html">
           <img src="./assets/img/upside_logo.png" alt="upside logo company" />
@@ -31,12 +31,12 @@
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="./about-us.html">About Us</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a id="leaderboards-link" class="nav-link" href="#leaderboards">Leaderboards</a>
 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link visually-hidden" href="#">Services</a>
+            </li> -->
+            <li class="nav-item visually-hidden">
+              <a class="nav-link" href="#">Services</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -51,10 +51,12 @@
               </ul>
             </li>
           </ul>
-          <div class="button-nav">
-            <a href="./claim-winning.html"><button id="reponsive-nav" type="button" class="btn btn-warning">
+          <div class="button-nav pb-2 pt-2">
+            <a href="./claim-winning.html">
+              <button id="reponsive-nav" type="button" class="btn btn-warning">
                 Claim Winnings
-              </button></a>
+              </button>
+            </a>
             <img class="star-1" src="./assets/img/star_1.svg" alt="" />
             <img class="star-2" src="./assets/img/star_1.svg" alt="" />
             <img class="star-3" src="./assets/img/star_1.svg" alt="" />
@@ -174,12 +176,12 @@
     </div>
     <!--The Advantages of Upside -->
 
+
+
     <div class="container advantages">
-      <div class="row d-flex justify-content-evenly">
-        <div class="col-lg-12 title text-start">
-          <h2 class="">The Advantages of Upside</h2>
-        </div>
-        <div class="col-lg-4">
+      <h2 class="advantage-text">The Advantages of Upside</h2>
+      <div class="row d-flex justify-content-evenly mt-5">
+        <div class="col-lg-4 ">
           <h3>Partnership</h3>
           <p class="text-start">
             Teaming with Upside lets you engage your students, customers,
@@ -213,10 +215,12 @@
 
     <!-- Our Tournaments Leaderboards Desktop-->
 
-    <div class="container-fluid tournaments" id="leaderboards">
+    <div class="container-fluid tournaments pt-5" id="leaderboards">
+      <h2 class="mt-2 text-start our-tournament-text">Our Tournaments Leaderboards</h2>
       <div class="row justify-content-center prize-container">
+
         <div class="col-lg-12 mt-5 ps-lg-5">
-          <h2>Our Tournaments Leaderboards</h2>
+          
         </div>
         <div class="col-lg-12 container-prizes">
           <div class="row">
@@ -1201,11 +1205,9 @@
 
     <!-- TESTIMONIALS -->
 
-    <div class="container-fluid testimonials my-5">
+    <div class="container-fluid testimonials">
+      <h2 class="our-tournament-text mb-5">Testimonials</h2>
       <div class="row justify-content-evenly">
-        <div class="col-lg-12 my-5 text-sm-center ps-5">
-          <h2 class="">Testimonials</h2>
-        </div>
         <div class="col-lg-3 text-center">
           <img src="./assets/img/mask_group.svg" alt="testimonial-image" />
           <p class="mt-4 text-start">
@@ -1267,7 +1269,7 @@
     </div>
   </main>
   <footer>
-    <div class="container-fluid footer">
+    <div class="container-fluid footer mt-2">
       <div class="row">
         <div class="col-lg-2">
           <h5 class="mt-5">Getting Started</h5>
