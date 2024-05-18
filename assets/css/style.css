@@ -12,9 +12,33 @@
 
 /* All containers*/
 
-.container{
-  max-width: 90%;
+
+.btn-dark{
+  background: #191930 !important;
+  /* width: 250px !important; */
+  height: 3rem;
+  font-weight: 3rem;
+  font-family: var(--font-title);
+  font-size: 18px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
 }
+
+.item-1{
+  background: url('../img/device-screen-with-mobile-app-betting-score-device-with-match-re.svg');
+}
+
+.rating {
+  /* padding: 0 15px ; */
+  display: flex;
+}
+
+.adv-img{
+  height: 204px;
+  width: 204px;
+}
+
+
 
 body {
   display: flex;
@@ -148,6 +172,40 @@ header {
 
 /* Carousel */
 
+.buttons-slider-container{
+  display: grid;
+  grid-template-columns: repeat(4, 250px); /* Default: 2 columns on small screens */
+  justify-content: space-between;
+  /* position: absolute; */
+  /* bottom: 10%; */
+  /* left: 0%; */
+  /* width: 100%; */
+  /* text-align: center; */
+  /* padding: 0 3.5rem; */
+  /* max-width: 1320px; */
+}
+
+
+
+.buttons-slider-container-mobile {
+  margin-top: 2rem;
+  display: none;
+  grid-template-columns: repeat(2, 250px);
+  justify-content: center;
+  width: 100%;
+  padding: 0 3.5rem;
+  gap: 2rem;
+}
+
+
+.carousel-p{
+
+  width: 50%;
+  font-size: 24px;
+  font-family: var(--font-text);
+
+}
+
 .banner-home{
   padding: 0;
 }
@@ -158,7 +216,7 @@ header {
   left: 0rem;
   text-align: left;
   width: 100%;
-  padding: 0 3.5rem;
+  /* padding: 0 3.5rem; */
 }
 
 .carousel-inner
@@ -194,6 +252,20 @@ header {
   -o-border-radius: 10px;
   font-family: var(--font-title);
  
+}
+
+.get-in-button{
+  background: #e78035;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: var(--font-title);
+  text-decoration: none;
+  color:#000
 }
 
 .carousel-caption .slider-buttons a {
@@ -272,11 +344,32 @@ header {
 }
 
 
-
 /* The Advantages of Upside */
 
+
+.d-grid-advantages{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  justify-content: space-evenly;
+  /* padding: 0 3.5rem; */
+  gap: 3.5rem;  
+  margin: auto;
+}
+
+.d-grid-item{
+    /* padding: 1rem 1.5rem; */
+    width: 100vh/3;
+  }
+
+  .d-grid-item p {
+    /* padding: 0 10%; */
+    font-size: 18px;
+    min-height: 200px;
+    margin-top: 2rem;
+}
+
 .advantages {
-  margin:4rem 0 10rem 0;
+  /* margin:4rem 0 0 0; */
   width: 98vw;
   max-width: 2500px;
   overflow: hidden;
@@ -328,9 +421,6 @@ header {
   font-size: 14px;
 }
 
-.tournaments .prize-container {
-  /* padding: var(--paddings-container); */
-}
 
 .our-tournament-text{
   padding:  1.5rem 2.5rem;
@@ -436,14 +526,11 @@ max-width: 1500px;
 }
 
 
-.tournaments-mobile{
-  display: none;
-}
 
 /* The advantages of upside */
 .advantage-text{
   text-align: left;
-  padding: 0rem 2.5rem;
+  /* padding: 0 2.5rem; */
 }
 
 
@@ -453,15 +540,28 @@ max-width: 1500px;
 }
 
 /* TESTIMONIALS */
-.testimonials .row{
-  /* padding: var(--paddings-container); */
+
+
+.testimonial-image{
+  height: 186px !important;
+  width: 186px;
+  border-radius: 50%;
 }
 
 
-.testimonials p{
-    padding: 0 45px;
+
+.person-feedback{
+  font-weight: 600;
 }
 
+.testimonial-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+
+.testimonial-item{
+  padding: 0 1rem;
+}
 
 /* Contact */
 
@@ -513,7 +613,7 @@ max-width: 1500px;
 .footer h5 {
   font-weight: 400;
   text-align: left;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
 .footer li{
@@ -524,6 +624,10 @@ max-width: 1500px;
 .footer a{
   text-decoration: none;
   color: black;
+}
+
+ol, ul {
+  padding-left: 0rem;
 }
 
 
@@ -656,14 +760,14 @@ color: #000;
 .About-banner {
   background: #191930;
   color: #ffffff;
-  padding: 2.5rem 0;
+  padding: 6.5rem 0;
   overflow: hidden;
   
 }
 
 .About-banner .row{
   justify-content: space-between !important;
-  padding: 3rem 3.5rem;
+  /* padding: 3rem 3.5rem; */
 }
 
 .About-banner .image img{
@@ -684,7 +788,87 @@ color: #000;
 .our-team{
   padding: 0 3.5rem;
 }
+
+
+/* tablet screen */
+@media (min-width: 768px)  and (max-width: 991px) {
+  .buttons-slider-container{
+      grid-template-columns: repeat(2, 250px); 
+      gap:1rem;
+      display: none;
+  }
+
+  .d-grid-advantages{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    gap:1rem;
+    padding: 0;
+    /* align-items: center; */
+  }
+
+
+  .d-grid-item img{
+    width: 150px;
+    margin: auto;
+  }
+
+  .d-grid-center {
+    grid-column: 1 / -1; /* Span across both columns */
+   justify-self: center;
+   width: 50%;
+   align-items: center;
+  }
+
+  .buttons-slider-container-mobile{
+    display: grid;
+  }
+
+
+  .carousel-p{
+    font-size: 16px;
+  }
+
+  .carousel-caption{
+    top:2rem;
+  }
+
+}
+
+
+/* for ipad pro etc screen */
+@media (min-width: 1023px)  and (max-width: 1025px) {
+  .buttons-slider-container{
+    grid-template-columns: repeat(4, 200px); 
+    gap:1rem;
+    
+  }
+}
+
+
+/* for mobile screen */
+
 @media only screen and (max-width:575px) {
+
+  .testimonial-grid{
+    grid-template-columns: repeat(1,1fr);
+    gap: 5rem;
+  } 
+
+.d-grid-advantages{
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(1,1fr);
+  justify-content: center;
+  gap:1rem;
+  padding: 0;
+  /* align-items: center; */
+}
+
+.d-grid-advantages .d-grid-item img{
+  width: 150px;
+}
 
 /* Padding all containers */
 .About-banner .row,
@@ -711,12 +895,6 @@ header{
 }
 
 
-#reponsive-nav {
-  /* margin: 20% 0 10% 0; */
-  /* width: 80%; */
-}
-
-
 .button-nav {
 margin: auto;
 }
@@ -735,6 +913,13 @@ margin: auto;
   display: none;
 }
 
+.star {
+  width: 5px; /* Adjust the width of each star */
+  height: 5px; /* Adjust the height of each star */
+  margin-right: 5px; /* Adjust the spacing between stars */
+ 
+}
+
 .navbar img{
   width: 50px;
 }
@@ -745,9 +930,24 @@ margin: auto;
 
 
   /* Carousel */
-  .main-carousel .carousel-item{
-    height: 40rem;
+
+  .buttons-slider-container-mobile{
+    grid-template-columns: repeat(2, 170px); 
+    display: grid;
+    justify-content: center;
+    align-items: center;        
   }
+
+  .main-carousel .carousel-item{
+    overflow: hidden;
+    /* width: 100%; */
+  }
+
+
+  .buttons-slider-container{
+    display: none;
+  }
+
 
   .main-carousel .carousel-item img{
     width: 60rem !important;
@@ -788,6 +988,35 @@ margin: auto;
     height: 6.5vh;
     border: 3px solid #191930;
   }
+
+
+
+  .carousel-new-buttons {
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.carousel-button {
+  background: #191930;
+  color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  width: 250px;
+    height: 3rem;
+    background: #191930;
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    font-family: var(--font-title);
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    line-height: 15px;
+    border: 3px solid #191930;
+    border-radius: 10px;
+}
+
+
+
 
  
 
@@ -837,7 +1066,8 @@ margin-bottom: 35px;
 
 
 .grand-prize-container {
-  margin: 3rem 1rem 0rem !important;
+  /* margin: 3rem 1rem 0rem !important; */
+  margin: 3rem 0;
 }
 
 
@@ -884,6 +1114,8 @@ margin-bottom: 35px;
 .testimonials h2{
   text-align: center;
 }
+
+
 
 
   .contact form{
@@ -1011,6 +1243,10 @@ width: 100%;
     
 }
 
+.tournaments .card-container{
+  padding: 0 1rem;
+}
+
   .carousel-buttons button {
     width: 400px;
     height: 3rem;
@@ -1019,8 +1255,10 @@ width: 100%;
 
   .advantages .row p {
    margin-top: 3rem;
-    min-height: 330px;
-}
+    min-height: 100px;
+    /* margin-bottom: 5rem; */
+    /* border: solid 2px red; */
+  }
 
 .grand-prize-list{
   padding: 0;
@@ -1045,4 +1283,11 @@ width: 100%;
       height: 17rem;
   }
 
+  
+
 }
+
+
+
+
+
