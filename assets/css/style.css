@@ -38,6 +38,9 @@
   width: 204px;
 }
 
+.adv-container{
+  padding: 6rem 0;
+}
 
 
 body {
@@ -193,8 +196,8 @@ header {
   grid-template-columns: repeat(2, 250px);
   justify-content: center;
   width: 100%;
-  padding: 0 3.5rem;
-  gap: 2rem;
+  /* padding: 0 4.5rem; */
+  gap: 1rem;
 }
 
 
@@ -851,6 +854,18 @@ color: #000;
 
 @media only screen and (max-width:575px) {
 
+  .advantage-text{
+    text-align: center;
+  }
+
+  .d-grid-item p {
+    /* padding: 0 10%; */
+    font-size: 18px;
+    min-height: auto;
+    margin-top: 2rem;
+    /* border: solid; */
+}
+
   .testimonial-grid{
     grid-template-columns: repeat(1,1fr);
     gap: 5rem;
@@ -861,13 +876,14 @@ color: #000;
   margin: auto;
   grid-template-columns: repeat(1,1fr);
   justify-content: center;
-  gap:1rem;
+  gap:5rem;
   padding: 0;
   /* align-items: center; */
 }
 
 .d-grid-advantages .d-grid-item img{
   width: 150px;
+  height: 150px;
 }
 
 /* Padding all containers */
@@ -958,7 +974,7 @@ margin: auto;
   .main-carousel .carousel-caption{
     display: block !important;
     top: 5rem;
-    left: 1.5rem;
+    /* left: 1.5rem; */
   }
 
   .carousel-caption h2{
