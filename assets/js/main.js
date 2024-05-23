@@ -271,15 +271,9 @@ $(document).ready(function () {
                         <div class="grand-prize-container text-center">
                             <p class="title">${tournament.title}</p>
                             <div class="text d-flex">
-                                <ul class="grand-prize-list">
-                                    <li class="d-flex">
-                                        <p class="points">3000 pts</p>
-                                        <p class="name">Nantucket Red® polo</p>
-                                    </li>
-                                    <!-- Add more list items dynamically if needed -->
-                                </ul>
+                                
                             </div>
-                            <button class="view-more">View More</button>
+            
                         </div>
                         <div class="card">
                             <div class="card-body text-center">

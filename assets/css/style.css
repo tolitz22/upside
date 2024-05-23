@@ -12,6 +12,40 @@
 
 /* All containers*/
 
+.get-in-touch{
+  background-color: #191930; 
+  color: white !important;
+}
+
+.hs-form-1e70a165-b487-49c5-9969-f92f5f1bfca7_332bf2d4-6f72-43c9-af80-0b658b0d7db6 .hs-form-field label:not(.hs-error-msg) {
+  font-family: arial, helvetica, sans-serif;
+  color: white;
+}
+
+.user-xp-container{
+  background-color: #191930; 
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right:1rem ;
+}
+
+.user-experience-grid{
+  display: grid;
+  /* background-color: #6ef03a; */
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+
+.user-grid-item{
+  /* border: solid; */
+}
+
+.four-tile-grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+}
 
 .btn-dark{
   background: #191930 !important;
@@ -711,6 +745,9 @@ color: #000;
 
 .works-banner{
   height: 60vh;
+  display: flex;
+  align-items: center;
+  background-color: #191930; color: white;
 }
 
 .works-banner .text p{
@@ -792,9 +829,44 @@ color: #000;
   padding: 0 3.5rem;
 }
 
+.container-buttons{
+  bottom: 10%;
+}
+
+.play-now{
+  background: #f9bc2c;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-size: 1.1rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: var(--font-title);
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+}
+
+@media (min-width: 1400px) {
+  /* Your CSS rules for even larger screens go here */
+  .carousel-inner{
+    max-height: 800px;
+  } 
+  .container-buttons{
+    bottom: 55%;
+  }
+    
+}
+
 
 /* tablet screen */
 @media (min-width: 768px)  and (max-width: 991px) {
+
+  .user-experience-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
   .buttons-slider-container{
       grid-template-columns: repeat(2, 250px); 
       gap:1rem;
@@ -853,6 +925,14 @@ color: #000;
 /* for mobile screen */
 
 @media only screen and (max-width:575px) {
+
+  .user-experience-grid{
+    display: grid;
+    /* background-color: #6ef03a; */
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+  }
+
 
   .advantage-text{
     text-align: center;
@@ -1253,6 +1333,10 @@ width: 100%;
 
 @media only screen and (min-width:576px) and (max-width:1024px){
 
+
+  .works-banner{
+    height: 70vh;
+  }
   .carousel-inner .carousel-caption p {
     width: 90%;
     font-size: 21px;

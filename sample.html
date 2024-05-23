@@ -1,888 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/rectangle_755.svg" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>How it Works</title>
+  </head>
+  <body>
+    <header class="container">
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid d-flex">
+          <a href="./index.html">
+            <img src="./assets/img/upside_logo.png" alt="upside logo company" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./about-us.html">About Us</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a id="leaderboards-link" class="nav-link" href="#leaderboards">Leaderboards</a>
+  
+              </li> -->
+              <li class="nav-item visually-hidden">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+  
+              <li class="nav-item ">
+                <a class="nav-link" href="./how-it-works.html">How it works</a>
+              </li>
+  
+              <li class="nav-item align-self-center" >
+                <a href="http://play.upsidegames.com" class="nav-link play-now">PLAY NOW</a>
+              </li>
+            </ul>        
+          </div>
+        </div>
+      </nav>
+    </header>
+  
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./assets/img/rectangle_755.svg" type="image/x-icon" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css"> -->
-
-  <title>Upside</title>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container-fluid d-flex">
-        <a href="./index.html">
-          <img src="./assets/img/upside_logo.png" alt="upside logo company" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./about-us.html">About Us</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a id="leaderboards-link" class="nav-link" href="#leaderboards">Leaderboards</a>
-
-            </li> -->
-            <li class="nav-item visually-hidden">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                How it works
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="./how-it-works.html">Partners</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Users</a></li>
-              </ul>
-            </li>
-          </ul>
-          <!-- <div class="button-nav pb-2 pt-2">
-            <a href="./claim-winning.html">
-              <button id="reponsive-nav" type="button" class="btn btn-warning">
-                Claim Winnings
-              </button>
-            </a>
-            <img class="star-1" src="./assets/img/star_1.svg" alt="" />
-            <img class="star-2" src="./assets/img/star_1.svg" alt="" />
-            <img class="star-3" src="./assets/img/star_1.svg" alt="" />
-            <img class="star-4" src="./assets/img/star_1.svg" alt="" />
-          </div> -->
+    <main class="mb-5">
+      <div class="works-banner claim-banner"> 
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg-6 text">
+              <h1>Partnership with Upside</h1>
+              <p class="mt-3">
+                Whether you're a school, restaurant, bar, company, or just a group
+                of friends, Upside helps you engage your audience like never
+                before. With customizable membership tiers, unique prizes, and
+                original game formats, Upside will set you apart and keep your
+                audience coming back week after week. See below how partnering
+                with Upside can make the difference!
+              </p>
+            </div>
+            <div class="col-lg-5 image text-center">
+              <img src="./assets/img/parnership.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-  </header>
-
-
-
-  <main>
-    <div id="main-carousel" class="carousel slide main-carousel" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active position-relative">
-                <img class="w-100" src="./assets/img/device-screen-with-mobile-app-betting-score-device-with-match-re.svg" alt="...">            
-                <div class="carousel-caption">
-                    <h2>The Games Within the Games</h2>
-                    <p class="mt-4 carousel-p">Elevate your fandom to the next level with Upside! With both web and mobile platforms, Upside offers unique fantasy challenges around all your favorite college sports. Support your university's alumni association, booster club, athlete unions and more with games and tournaments of your favorite student athletes!</p>  
-                    <div class="slider-buttons mt-4">
-                        <a href="#contact"><button class="get-in me-3">Get in Touch</button></a>
-                        <a href="http://play.upsidegames.com"><button class="play-now">PLAY NOW</button></a>
-                    </div>
-                    <div class="buttons-slider-container">
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" aria-current="true" class="btn btn-dark btn-slider active carousel-button">Universities</button>
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" class="btn btn-dark btn-slider">Restaurants & Bars</button>
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" class="btn btn-dark btn-slider">Corporate</button>
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" class="btn btn-dark btn-slider">Organization</button>
-                    </div>
-                </div>                                
-            </div>
-            <div class="carousel-item position-relative">
-                <img src="./assets/img/restaurant_2_1.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                    <h2>Keep 'Em Coming Back</h2>
-                    <p class="mt-4">From sports bars to Michelin stars, Upside gives your customers another reason to return. Select unique redeemable prizes, and give your patrons custom games to play to take engagement to the next level.</p>
-                    <div class="slider-buttons mt-4">
-                        <a href="#contact"><button class="get-in me-3">Get in Touch</button></a>
-                        <a href="#"><button class="play-now">PLAY NOW</button></a>
-                    </div>
-                    <div class="buttons-slider-container btn-slider ">
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="btn btn-dark btn-slider carousel-button">Universities</button>
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" class="btn btn-dark btn-slider">Restaurants & Bars</button>
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" class="btn btn-dark btn-slider">Corporate</button>
-                        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" class="btn btn-dark btn-slider">Organization</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item position-relative">
-              <img src="./assets/img/corporate_1.png" class="d-block w-100" alt="..." />
-              <div class="carousel-caption">
-                <h2>Liven Up Your Workplace</h2>
-                <p class="mt-4">
-                  Nothing boosts employee morale and engagement like play-to-win
-                  competitions. Give your office something to talk about - and
-                  encourage participation with unique prizes that you choose!
-                </p>
-                <div class="slider-buttons mt-4">
-                  <button class="get-in me-3">Get in Touch</button>
-                  <button class="play-now">PLAY NOW</button>
-                </div>
-
-                <div class="buttons-slider-container btn-slider ">
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="btn btn-dark btn-slider carousel-button">Universities</button>
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" class="btn btn-dark btn-slider">Restaurants & Bars</button>
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" class="btn btn-dark btn-slider">Corporate</button>
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" class="btn btn-dark btn-slider">Organization</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item position-relative">
-              <img src="./assets/img/organization_1.png" class="d-block w-100" alt="..." />
-              <div class="carousel-caption">
-                <h2>Do More for Your Organization</h2>
-                <p class="mt-4">
-                  Clubs, unions, associations - whatever the reason for getting
-                  together, get together better with Upside! Let us set up games
-                  and tournament for your organization, and see engagement soar!
-                </p>
-                <div class="slider-buttons mt-4">
-                  <a href="#contact">
-                    <button class="get-in me-3">Get in Touch</button>
-                  </a>
-                  <button class="play-now">PLAY NOW</button>
-                </div>
-                <div class="buttons-slider-container btn-slider ">
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="btn btn-dark btn-slider carousel-button">Universities</button>
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" class="btn btn-dark btn-slider">Restaurants & Bars</button>
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" class="btn btn-dark btn-slider">Corporate</button>
-                  <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" class="btn btn-dark btn-slider">Organization</button>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-
-<!-- 
-<main>
-    <div id="main-carousel" class="main-carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true"
-          aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
-          aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
-          aria-label="Slide 4"></button>
-      </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active position-relative">
-                <img class="w-100" src="./assets/img/device-screen-with-mobile-app-betting-score-device-with-match-re.svg" alt="...">            
-                <div class="">
-                    <div class="carousel-caption">
-                        <h2>The Games Within the Games</h2>
-                        <p class="mt-4 carousel-p">
-                            Elevate your fandom to the next level with Upside! With both
-                            web and mobile platforms, Upside offers unique fantasy
-                            challenges around all your favorite college sports. Support
-                            your university's alumni association, booster club, athlete
-                            unions and more with games and tournaments of your favorite
-                            student athletes!
-                        </p>  
-                        <div class="slider-buttons mt-4">
-                            <a href="#contact"><button class="get-in me-3">Get in Touch</button></a>
-                            <a href="http://play.upsidegames.com">
-                                <button class="play-now">PLAY NOW</button>
-                            </a>
-                        </div>
-    
-                        <div class="buttons-slider-container">
-                            <button  type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" aria-current="true"
-                              class="btn btn-dark btn-slider active  carousel-button">
-                              Universities
-                            </button>
-                            <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
-                              class="btn btn-dark btn-slider  ">
-                              Restaurants & Barsss
-                            </button>
-                            <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
-                              class="btn btn-dark btn-slider">
-                              Corporate
-                            </button>
-                            <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
-                              class="btn btn-dark btn-slider">
-                              Organization
-                            </button>
-                       </div>
-    
-                    </div>                                
-                </div>                          
-            </div>
-
-            <div class="carousel-item position-relative">
-              <img src="./assets/img/restaurant_2_1.png" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h2>Keep 'Em Coming Back</h2>
-                <p class="mt-4">
-                  From sports bars to Michelin stars, Upside gives your
-                  customers another reason to return. Select unique redeemable
-                  prizes, and give your patrons custom games to play to take
-                  engagement to the next level.
-                </p>
-                <div class="slider-buttons mt-4">
-                  <a href="#contact">
-                    <button class="get-in me-3">Get in Touch</button>
-                  </a>
-                  <a href=""><button class="play-now">PLAY NOW</button></a>
-                </div>
-
-                <div class="buttons-slider-container btn-slider active">
-                  <button  type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" aria-current="true"
-                    class="btn btn-dark btn-slider carousel-button">
-                    Universities
-                  </button>
-                  <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
-                    class="btn btn-dark btn-slider  ">
-                    Restaurants & Bars
-                  </button>
-                  <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
-                    class="btn btn-dark btn-slider">
-                    Corporate
-                  </button>
-                  <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
-                    class="btn btn-dark btn-slider">
-                    Organization
-                  </button>
-             </div>
-              </div>
-            </div>
-        </div>
         
-    </div>
 
-    
-</main> -->
-
-
-
-  <!-- HERO  -->
-  <main>
-    <!-- <div class="container-fluid banner-home">
-      <div id="main-carousel" class="carousel main-carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
-            aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
-            aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assets/img/device-screen-with-mobile-app-betting-score-device-with-match-re.svg"
-              class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>The Games Within the Games</h2>
-              <p class="mt-4">
-                Elevate your fandom to the next level with Upside! With both
-                web and mobile platforms, Upside offers unique fantasy
-                challenges around all your favorite college sports. Support
-                your university's alumni association, booster club, athlete
-                unions and more with games and tournaments of your favorite
-                student athletes!
-              </p>
-              <div class="slider-buttons mt-4">
-                <a href="#contact"><button class="get-in me-3">Get in Touch</button></a>
-                <a href="http://play.upsidegames.com">
-                  <button class="play-now">PLAY NOW</button>
-                </a>
-              </div>
-            </div>
+      <div class="container mt-5 mb-5">
+        <div class="four-tile-grid">
+          <div class="card shadow p-5">
+            <h3>Create</h3>
+            <p>
+              Start with memberships, free or paid, monthly or yearly. Then
+              create custom fantasy challenges, or let us do the work for you!
+              Upside supports a wide variety of sports, from high school to
+              pro.
+            </p>
+            <p>
+              For an even more unique experience, offer custom prizes that
+              resonate with your specific target audience.
+            </p>
           </div>
-
-          
-          <div class="carousel-item">
-            <img src="./assets/img/restaurant_2_1.png" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Keep 'Em Coming Back</h2>
-              <p class="mt-4">
-                From sports bars to Michelin stars, Upside gives your
-                customers another reason to return. Select unique redeemable
-                prizes, and give your patrons custom games to play to take
-                engagement to the next level.
-              </p>
-              <div class="slider-buttons mt-4">
-                <a href="#contact">
-                  <button class="get-in me-3">Get in Touch</button>
-                </a>
-                <a href=""><button class="play-now">PLAY NOW</button></a>
-              </div>
-            </div>
+          <div class="card shadow p-5">
+            <h3>Engage</h3>
+            <p>
+              Reach out to your mailing lists, social media followers,
+              employees, friends, and more to get people playing. Upside
+              supports web and mobile gameplay, so anyone with an internet
+              connection can play!
+            </p>         
           </div>
-          <div class="carousel-item">
-            <img src="./assets/img/corporate_1.png" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Liven Up Your Workplace</h2>
-              <p class="mt-4">
-                Nothing boosts employee morale and engagement like play-to-win
-                competitions. Give your office something to talk about - and
-                encourage participation with unique prizes that you choose!
-              </p>
-              <div class="slider-buttons mt-4">
-                <button class="get-in me-3">Get in Touch</button>
-                <button class="play-now">PLAY NOW</button>
-              </div>
-            </div>
+          <div class="card shadow p-5">
+            <h3>Expand</h3>
+            <p>
+              Expand your userbase through a variety of campaigns - in-stadium
+              promotions, paid ads, or reach out to us about cross-promoting
+              with other partners!
+            </p>        
           </div>
-          <div class="carousel-item">
-            <img src="./assets/img/organization_1.png" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Do More for Your Organization</h2>
-              <p class="mt-4">
-                Clubs, unions, associations - whatever the reason for getting
-                together, get together better with Upside! Let us set up games
-                and tournament for your organization, and see engagement soar!
-              </p>
-              <div class="slider-buttons mt-4">
-                <a href="#contact">
-                  <button class="get-in me-3">Get in Touch</button>
-                </a>
-                <button class="play-now">PLAY NOW</button>
-              </div>
-            </div>
+          <div class="card shadow p-5">
+            <h3>Customize</h3>
+            <p>
+              What sets Upside apart is that <i>everything</i> is
+              customizable! We allow you to be as creative as you want, or let
+              us do the work if you don't have the time. Upside lets you
+              customize: 
+            </p>
+            <ul class="list-group">
+              <li class="list-group-item">FANTASY CHALLENGES</li>
+              <li class="list-group-item">PRIZES</li>
+              <li class="list-group-item">MEMBERSHIPS</li>
+              <li class="list-group-item">WEBSITE</li>
+              <li class="list-group-item">TEXT/LOGOS</li>
+              <li class="list-group-item">MESSAGING</li>
+              <li class="list-group-item">LOOK AND FEEL</li>
+            </ul>
+            <p class="mt-2">
+              Things going well? Talk to us about a white label app that can
+              become your own!
+            </p>
           </div>
-        </div>
-        <div class="carousel-buttons">
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" aria-current="true"
-            class="btn me-lg-5 me-sm-3 me-md-0 btn-warning btn-slider active">
-            Universities
-          </button>
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
-            class="btn me-lg-5 btn-warning btn-slider">
-            Restaurants & Bars
-          </button>
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
-            class="btn me-lg-5 me-sm-3 btn-warning btn-slider">
-            Corporate
-          </button>
-          <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
-            class="btn btn-warning btn-slider">
-            Organization
-          </button>
         </div>
       </div>
-    </div>
-     -->
+
+
+      <div class="user-xp-container p-5">
+        <div class="container mt-5">
+          <div class="mb-5">
+            <h2 class="text-light">Upside: Creating the User Experience</h2>
+          </div>
+          <div class="user-experience-grid">      
+            <div class="user-grid-item p-5 card shadow" >
     
+              <h3>Challenges</h3>
     
+              <p>Create custom challenges for your targeted base. Prizes are custom, too -- make your own reward token (featured), 
+                offer products/services, even meet & greets with VIPs. Everything is customizable -- if you can think it,
+                 we can do it! Upside can also provide templates for our more popular challenges.</p>
     
-
-
-    <div class="buttons-slider-container-mobile">
-        <button  type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" aria-current="true"
-          class="btn btn-dark">
-          Universities
-        </button>
-        <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-current="true"
-          class="btn btn-dark  ">
-          Restaurants & Bars
-        </button>
-        <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-current="true"
-          class="btn btn-dark  ">
-          Corporate
-        </button>
-        <button   type="button" data-bs-target="#main-carousel" data-bs-slide-to="3" aria-current="true"
-          class="btn btn-dark ">
-          Organization
-        </button>
-   </div>
-
-       
-    <!--The Advantages of Upside -->
-
-    <div class="container advantages mt-4">
-        
-      <h2 class="advantage-text mt-4">The Advantages of Upside</h2>
-      <div class="d-grid-advantages mt-5">
-        <div class="d-grid-item">
-          <h3>Partnership</h3>
-          <p class="text-start">
-            Teaming with Upside lets you engage your students, customers,
-            employees, or even friends in creative news ways. Let us build
-            your fantasy challenges, or create your own!
-          </p>
-          <img class="text-center" src="./assets/img/parnership_1.svg" alt="" />
-        </div>
-        <div class="d-grid-item">
-          <h3>Entertainment</h3>
-
-          <p class="text-start">
-            You already love the sports, the teams, the players. Upside helps
-            you create fun and exciting challenges, leveling up the game day
-            experience for your target users.
-          </p>
-
-          <img class="img-enter" src="./assets/img/entertainment_1.svg" alt="" />
-        </div>
-        <div class="d-grid-item d-grid-center">
-          <h3>Engagement</h3>
-          <p class="text-start">
-            With endless possibilities for game day challenges or season-long
-            tournaments, Upside will keep your target users coming back week
-            after week. You provide the prizes, we provide the fun!
-          </p>
-          <img src="./assets/img/money_1.svg" alt="" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Our Tournaments Leaderboards Desktop-->
-
-
-
-
-    <div class="container tournaments pt-5" id="leaderboards">
-      <h2 class="mt-2 text-start our-tournament-text">Our Tournaments Leaderboards</h2>
-      <div class="prize-container">
-
-
-        <!-- Carousel -->
-
-        <div class="leaderboard-carousel">
-          
-        </div>
-
-      
-      </div>
-    </div>
-
-    <!-- Our Tournaments Leaderboards Mobile version -->
-    <div class="container-fluid tournaments tournaments-mobile">
-      <div class="row justify-content-center prize-container">
-        <div class="col-lg-12 mt-5 ps-lg-5">
-          <h2>Our Tournaments Leaderboards</h2>
-        </div>
-
-
-        <!-- Carousel -->
-
- 
-
-        <div class="col-lg-12">
-          <div id="carouselExampleIndicators3" class="carousel slide" data-bs-touch="true" data-ride="carousel">
-            <div class="carousel-inner">
+              <img class="img-fluid mt-1" src="./assets/img/Sample1-Challenges.jpg" alt="">
+            </div>
+            <div class="user-grid-item p-5 card shadow">
+    
+              <h3>User Experience</h3>
+    
+              <p>Users can expand their challenge view, use sorting and filters, and edit various profile setting to ensure they have the perfect experience.</p>
               
-              <div class="carousel-item active">
-
-                <div class="col-md-4 card-container mb-3">
-                  <div class="grand-prize-container text-center">
-                    <p class="title">Tournament Grand Prize</p>
-                    <div class="text d-flex">
-                      <ul class="grand-prize-list">
-                        <li class="d-flex">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <button class="view-more">View More</button>
-                  </div>
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h4 class="card-title">Boston College Leaderboard</h4>
-                      <img src="./assets/img/bcl_1.svg" alt="" />
-                       <input type="text" class="search-input" placeholder="Search">
-                       <div class="table-container">
-                       <table class="text-start leaderboard-table">
-                        <tr>
-                          <th>Username</th>
-                          <th>Pts</th>
-                        </tr>
-                        <tr>
-                          <td>Matt M</td>
-                          <td>1532</td>
-                        </tr>
-                        <tr>
-                          <td>Dolphox</td>
-                          <td>1428</td>
-                        </tr>
-                        <tr>
-                          <td>Osuballer3486</td>
-                          <td>1363</td>
-                        </tr>
-                        <tr>
-                          <td>Enjer</td>
-                          <td>1294</td>
-                        </tr>
-
-                        <tr>
-                          <td>Jennygirllx</td>
-                          <td>1264</td>
-                        </tr>
-                        <tr>
-                          <td>Msenge412</td>
-                          <td>1217</td>
-                        </tr>
-                      </table>
-                      </div>
-                      <p class="mt-5">
-                        Don't see your score? Please double-check your
-                        username in the Profile section of the Upside app.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-
-
-              </div>
-              <div class="carousel-item">
-                <div class="col-md-4 card-container mb-3">
-                  <div class="grand-prize-container text-center">
-                    <p class="title">Tournament Grand Prize</p>
-                    <div class="text d-flex">
-                      <ul class="grand-prize-list">
-                        <li class="d-flex">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <button class="view-more">View More</button>
-                  </div>
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h4 class="card-title">N.E Patriots Leaderboard</h4>
-                      <img src="./assets/img/ptl_1.svg" alt="" />
-                      <input type="text" class="search-input" placeholder="Search">
-                      <div class="table-container">
-                      <table class="text-start leaderboard-table">
-                        <tr>
-                          <th>Username</th>
-                          <th>Pts</th>
-                        </tr>
-                        <tr>
-                          <td>Rattlehead</td>
-                          <td>920</td>
-                        </tr>
-                        <tr>
-                          <td>SuperHeroTo5</td>
-                          <td>780</td>
-                        </tr>
-                        <tr>
-                          <td>Matt M</td>
-                          <td>760</td>
-                        </tr>
-                        <tr>
-                          <td>Freakystud21</td>
-                          <td>760</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Dolphox</td>
-                          <td>620</td>
-                        </tr>
-                      </table>
-                      </div>
-                      <p class="mt-5">
-                        Don't see your score? Please double-check your
-                        username in the Profile section of the Upside app.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-
-
-                <div class="col-md-4 card-container mb-3">
-                  <div class="grand-prize-container text-center">
-                    <p class="title">Tournament Grand Prize</p>
-                    <div class="text d-flex">
-                      <ul class="grand-prize-list">
-                        <li class="d-flex">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                        <li class="d-flex grand-prize-item d-none">
-                          <p class="points">3000 pts</p>
-                          <p class="name">Nantucket Red® polo</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <button class="view-more">View More</button>
-                  </div>
-                  <div class="card">
-                    <div class="card-body text-center">
-                      <h4 class="card-title">2022 WFT Pod Leaderboard</h4>
-                      <img src="./assets/img/ptl_1.svg" alt="" />
-                      <input type="text" class="search-input" placeholder="Search">
-                      <div class="table-container">
-                      <table class="text-start leaderboard-table">
-                        <tr>
-                          <th>Username</th>
-                          <th>Pts</th>
-                        </tr>
-                        <tr>
-                          <td>Rattlehead</td>
-                          <td>920</td>
-                        </tr>
-                        <tr>
-                          <td>SuperHeroTo5</td>
-                          <td>780</td>
-                        </tr>
-                        <tr>
-                          <td>Matt M</td>
-                          <td>760</td>
-                        </tr>
-                        <tr>
-                          <td>Freakystud21</td>
-                          <td>760</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Emgaba</td>
-                          <td>640</td>
-                        </tr>
-                        <tr>
-                          <td>Dolphox</td>
-                          <td>620</td>
-                        </tr>
-                      </table>
-                      </div>
-                      <p class="mt-5">
-                        Don't see your score? Please double-check your
-                        username in the Profile section of the Upside app.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+              <img class="img-fluid mt-1" src="./assets/img/Sample2-ChallengesExpanded.jpg" alt="">
             </div>
-            <div class="col-6 text-right">
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+    
+    
+            <div class="user-grid-item p-5 card shadow">
+              <h3>Tournaments</h3>
+    
+              <p>Upside also supports tournament play! Tournaments, especially those with daily or weekly challenges, are a perfect way to keep your users coming back.</p>
+              <img class="img-fluid" src="./assets/img/Sample3-TournamentChallenges.jpg" alt="">
+            </div>
+            <div class="user-grid-item p-5 card shadow">
+    
+              <h3>Gameplay</h3>
+    
+              <p>You set the number of picks a user makes, the type of picks, 
+                the challenge descriptions -- all of it! Users can easily drag and drop, delete, select, and submit picks from our easy-to-use interface.</p>
+    
+              <img class="img-fluid mt-1" src="./assets/img/Sample4-PicksScreen.jpg" alt="">
+            </div>
+            <div class="user-grid-item card p-5 shadow">
+              <h3>Picks Lists</h3>
+    
+              <p>If you're a college or university, or a sports team at any level, this is a great place to feature your own athletes! Backgrounds and pics are customizable, and we support stats displays as well.</p>
+              <img class="img-fluid mt-1" src="./assets/img/Sample5-AvailablePick.jpg" alt="">
+            </div>
+            <div class="user-grid-item card shadow p-5">
+              <h3>Store</h3>
+    
+              <p>If offering token or cash prizes, populate your store with your own merchandise or experiences. The more unique, the more popular with users!
+    
+                And remember...Upside uses a success-based model, so you'll never pay a penny! We all win together.
+                
+                Ready to set up your own branded gameplay?? [Reach out to us today] and let's see if Upside is a fit for you!</p>
+              <img class="img-fluid mt-1" src="./assets/img/Sample6-Store.jpg" alt="">
             </div>
           </div>
         </div>
+
       </div>
-    </div>
+      
+      
+      
+      
+      
 
+    
+    </main>
 
-    <!-- TESTIMONIALS -->
-
-    <div class="container-fluid testimonials">
-      <h2 class="our-tournament-text mb-5">What our users are saying</h2>
-      <div class="testimonial-grid justify-content-evenly">
-        <div class="testimonial-item ">
-          <img class="testimonial-image" src="./assets/img/Us-Labels-Picture.png" alt="testimonial-image" />
-          <p class="mt-4">
-            “Love Upside! So easy to play, you can make your picks from anywhere. I usually win something every week!” 
-            <small class="mt-3 d-block person-feedback">Katie K.</small>
-          </p>          
-          <!-- <img class="mt-2" src="./assets/img/rating.svg" alt="" width="130px" /> -->
-          <div class="rating  d-flex justify-content-start">
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star"/>
-         </div>
-        
-        </div>
-        <div class="testimonial-item ">
-          <img class="testimonial-image" src="./assets/img/piggy-bank.png" alt="testimonial-image" />
-          <p class="mt-4">
-   
-            “This is an awesome format. Love picking athletes for all the challenges, 
-            vs building a fantasy team like most apps. Also love that the challenges are unique. Nice spin on fantasy games, for sure.” 
-            <small class="d-block mt-3 person-feedback">Aaron D.</small>
-          </p>
-          <div class="rating">
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star"/>
-         </div>
-        </div>
-        <div class="testimonial-item  ">
-          <img  class="testimonial-image" src="./assets/img/cars.png" alt="testimonial-image" />
-          <p class="mt-4">
-            “Even with the free account,
-             I've won a bunch. Plus Upside has contests around less-common sports 
-             - I've played golf, NASCAR, F1, even politics one time. Been an Upside user since 2019 - just keeps getting better!” 
-             
-             <small class="d-block person-feedback mt-3">Sandeep S.</small>
-          </p>
-          <div class="rating d-flex justify-content-start">
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star" class="me-1"/>
-            <img src="./assets/img/rating_star.svg" alt="Star"/>
-         </div>
-        </div>      
-      </div>
-    </div>
-
-    <!-- FORM CONTACT -->
-    <div id="contact" class="container-fluid contact text-center">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 text-white">
-          <h3 class="my-5">Get in Touch</h3>
-        </div>
-        <div class="col-lg-12 form-container text-center">
-          <form action="#" method="POST" class="w-25 form">
-            <div class="mb-3">
-              <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
-            </div>
-            <div>
-              <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                placeholder="Email" />
-            </div>
-            <textarea class="form-control mb-5" placeholder="Questions? Comments? Let us know!" id="floatingTextarea"
-              name="comments"></textarea>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-          <p class="success-form visually-hidden">Thanks! Your inquiry has been received. We typically respond within
-            24-72 hours</p>
+    <footer>
+      <div class="container footer mt-2">
+        <div class="row">
+          <div class="col-md-2">
+            <h5 class="mt-5">Getting Started</h5>
+            <ul>
+              <li class="mt-4">
+                <a href="http://play.upsidegames.com" target="_blank">Get the app</a>
+              </li>
+              <li class="nav-item mt-4 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  How it works
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./how-it-works.html">Partners</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Users</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="mt-5">Company</h5>
+            <ul>
+              <li class="mt-4"><a href="./about-us.html">About Us</a></li>
+              
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="mt-5">Contact</h5>
+            <ul>
+              <li class="mt-4"><a href="#">Support Home</a></li>
+              <li class="mt-4"><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mt-5">
+            <img src="./assets/img/instagram.svg" alt="" />
+            <a href="https://twitter.com/playupsidegames" target="_blank">
+              <img src="./assets/img/twitter.svg" alt="" />
+            </a>
+            <a href="https://www.facebook.com/playupside" target="_blank">
+              <img src="./assets/img/facebook.svg" alt="" />
+            </a>
+            <img src="./assets/img/linkedin.svg" alt="" />
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
-    <div class="container-fluid footer mt-2">
-      <div class="row">
-        <div class="col-md-2">
-          <h5 class="mt-5">Getting Started</h5>
-          <ul>
-            <li class="mt-4">
-              <a href="http://play.upsidegames.com" target="_blank">Get the app</a>
-            </li>
-            <li class="nav-item mt-4 dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                How it works
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="./how-it-works.html">Partners</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Users</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h5 class="mt-5">Company</h5>
-          <ul>
-            <li class="mt-4"><a href="./about-us.html">About Us</a></li>
-            
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h5 class="mt-5">Contact</h5>
-          <ul>
-            <li class="mt-4"><a href="#">Support Home</a></li>
-            <li class="mt-4"><a href="#contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 mt-5">
-          <img src="./assets/img/instagram.svg" alt="" />
-          <a href="https://twitter.com/playupsidegames" target="_blank">
-            <img src="./assets/img/twitter.svg" alt="" />
-          </a>
-          <a href="https://www.facebook.com/playupside" target="_blank">
-            <img src="./assets/img/facebook.svg" alt="" />
-          </a>
-          <img src="./assets/img/linkedin.svg" alt="" />
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>  
-  <script src="./assets/js/main.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
