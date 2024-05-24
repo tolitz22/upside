@@ -5,22 +5,24 @@ const carousel = document.getElementById("main-carousel");
 let activeButton = document.querySelector(".btn-slider.active");
 
 // Asegurarse de que haya un botón activo inicialmente
-if (activeButton === null) {
+if (activeButton === null && buttons[0] ) {
   buttons[0].classList.add("active");
   activeButton = document.querySelector(".btn-slider.active");
+
+  carousel.addEventListener("click", function (event) {
+  
+    if (event.target.classList.contains("btn-slider")) {
+      // Verificar si el botón que se hizo clic es diferente del botón activo actual
+      if (event.target !== activeButton) {
+        activeButton.classList.remove("active");
+        event.target.classList.add("active");
+        activeButton = event.target;
+      }
+    }
+  });
 }
 
-carousel.addEventListener("click", function (event) {
-  
-  if (event.target.classList.contains("btn-slider")) {
-    // Verificar si el botón que se hizo clic es diferente del botón activo actual
-    if (event.target !== activeButton) {
-      activeButton.classList.remove("active");
-      event.target.classList.add("active");
-      activeButton = event.target;
-    }
-  }
-});
+
 
 //Show list Tournament Grand Prize
 
@@ -47,37 +49,19 @@ tournamentButton.forEach(function (boton) {
 //Send form contact
 
 $(document).ready(function () {
-  $("form").submit(function (event) {
-    event.preventDefault(); // Prevenir la actualización de la página
+  // go to top button
+  var btn = $('#button');
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
 
-    // Obtener los valores de los campos
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var comments = $("#comments").val();
-
-    // Enviar la información mediante AJAX
-    $.ajax({
-      type: "POST",
-      url: "process-form.php", // Ruta al archivo PHP que procesará el formulario
-      data: {
-        name: name,
-        email: email,
-        comments: comments,
-      },
-      success: function (response) {
-        var successText = document.getElementsByClassName(
-          "success-form visually-hidden"
-        )[0];
-
-        successText.classList.remove("visually-hidden");
-      },
-      error: function (jqXHR, textStatus, errorThrown) {
-        console.log("Estado:", textStatus);
-        console.log("Error:", errorThrown);
-        // Mostrar mensaje de error
-        alert("Error to send form");
-      },
-    });
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
   });
 });
 
@@ -277,8 +261,7 @@ $(document).ready(function () {
                         </div>
                         <div class="card">
                             <div class="card-body text-center">
-                                <h4 class="card-title">Leaderboard</h4>
-                                <input type="text" class="search-input" placeholder="Search">
+                                <h4 class="card-title">Leaderboard</h4>                                
                                 <div class="table-container">
                                     <table class="text-start leaderboard-table">
                                         <tr>
