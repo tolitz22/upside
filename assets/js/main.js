@@ -51,6 +51,7 @@ tournamentButton.forEach(function (boton) {
 $(document).ready(function () {
   // go to top button
   var btn = $('#button');
+  var btn2 = $('#button2');
   $(window).scroll(function() {
     if ($(window).scrollTop() > 300) {
       btn.addClass('show');
@@ -60,6 +61,11 @@ $(document).ready(function () {
   });
 
   btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+
+  btn2.on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, '300');
   });
@@ -270,11 +276,7 @@ $(document).ready(function () {
                                         </tr>
                                         ${leaderboardHTML}
                                     </table>
-                                </div>
-                                <p class="mt-5">
-                                    Don't see your score? Please double-check your
-                                    username in the Profile section of the Upside app.
-                                </p>
+                                </div>                                
                             </div>
                         </div>
           

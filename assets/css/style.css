@@ -10,7 +10,9 @@
   padding: 0;
 }
 
-
+.font-weight-bold{
+  font-weight: bold;
+}
 
 #button {
   display: inline-block;
@@ -868,7 +870,12 @@ color: #000;
 }
 
 .container-buttons{
-  bottom: 10%;
+  bottom: 15%;
+    /* left: 29%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+  
 }
 
 .play-now{
@@ -892,7 +899,12 @@ color: #000;
     max-height: 800px;
   } 
   .container-buttons{
-    bottom: 55%;
+    bottom: 10%;
+    /* left: 29%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    /* border: solid white; */
   }
 
   .get-in-touch-container{
@@ -999,7 +1011,7 @@ color: #000;
   margin: auto;
   grid-template-columns: repeat(1,1fr);
   justify-content: center;
-  gap:3rem;
+  gap:1rem;
   padding: 1rem;
   /* align-items: center; */
 }
