@@ -294,7 +294,7 @@ $(document).ready(function () {
               // options
               cellAlign: 'left',
               contain: true,
-              pageDots: false,
+              pageDots: true,
               groupCells:false,
             });
             
