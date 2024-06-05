@@ -10,6 +10,17 @@
   padding: 0;
 }
 
+.our-team-grid-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+}
+
+
+
+.carousel-two .flickity-page-dots .dot.is-selected {
+  background: #191930;
+}
 
 .flickity-page-dots .dot.is-selected {
   background: white;
@@ -422,8 +433,14 @@ header {
   border: 3px solid #875F29;
 }
 
+.btn-slider.active {
+  border: 2px solid white; /* Adjust the color and width as needed */
+}
 
-.carousel-buttons .btn.active{
+
+
+
+.buttons-slider-container .btn .active{
   background: #191930;
   color: white;
   border: 3px solid white;
@@ -932,6 +949,15 @@ color: #000;
 /* tablet screen */
 @media (min-width: 768px)  and (max-width: 991px) {
 
+
+  .our-team-grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+  }
+
+  
+
   .user-experience-grid{
     grid-template-columns: repeat(2,1fr);
   }
@@ -988,12 +1014,33 @@ color: #000;
     gap:1rem;
     
   }
+  .our-team-grid-container{
+    gap: .8rem;
+  }
+
+  .team-member-img{
+    height: 320px;
+    width: 250px;
+  }
+
 }
 
 
 /* for mobile screen */
 
 @media only screen and (max-width:575px) {
+
+
+  .our-team-grid-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+  }
+
+
+  .carousel-indicators{
+    display: flex;
+  }
 
   .user-experience-grid{
     display: grid;
@@ -1180,11 +1227,7 @@ margin: auto;
     border-radius: 10px;
 }
 
-
-
-
  
-
 
   /* Advantages */
 
@@ -1456,7 +1499,21 @@ width: 100%;
 
 }
 
+@media only screen and (max-width:360px) {
+  .buttons-slider-container-mobile {
+    grid-template-columns: repeat(2, 160px);
+    display: grid;
+    justify-content: center;
+    align-items: center;    
+  }
+}
 
+
+.link{
+  color: orange;
+  font-weight: 600;
+  text-decoration: none;
+}
 
 
 

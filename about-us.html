@@ -16,8 +16,8 @@
 <body>
   <a id="button"></a>
 
-  <div class="sticky-top bg-white">
-    <header class="container">
+  <div class="sticky-top bg-white" >
+    <header class="container" id="top">
       <nav class="navbar navbar-expand-lg bg-white ">
         <div class="container-fluid d-flex">
           <a href="./index.html">
@@ -48,7 +48,7 @@
               </li>
   
               <li class="nav-item align-self-center" >
-                <a href="http://play.upsidegames.com" class="nav-link play-now">PLAY NOW</a>
+                <a href="http://play.upsidegames.com"  target="_blank" class="nav-link play-now">PLAY NOW</a>
               </li>
             </ul>        
           </div>
@@ -97,14 +97,17 @@
       
     </div>
 
-    <!-- Our Team -->
+
     <div class="container mb-5 mt-5">
-      <div class="row gx-5">
-        <h2 class="mb-5">Our Team</h2>
-        <div class="col-md-6 text-center">
-          <img class="m-auto" src="./assets/img/Tim+Keough.png" alt="Tim Keough" />
+      <h2 class="mb-5">Our Team</h2>
+      <div class="our-team-grid-container">
+        <div class="team-member card shadow p-4">
+          <div class="d-flex justify-content-center">
+            <img class="m-auto rounded team-member-img" src="./assets/img/Tim+Keough.png" alt="Tim Keough" />
+          </div>
+          
           <h5 class="text-center mt-5">Tim Keough</h5>
-          <p class="text-start">
+          <p class="text-justify">
             Tim is a multi-time successful technology entrepreneur that has
             focused on building companies that leverage technology to solve
             complex business problems. Having experienced all aspects of the
@@ -119,11 +122,16 @@
             areas - all the while maintaining an eye toward how each company
             can aid the others.
           </p>
+
         </div>
-        <div class="col-md-6 text-center">
-          <img class="m-auto" src="./assets/img/Kuehl+Ryan.png" alt="Tim Keough" />
+
+        <div class="team-member card shadow p-4">
+          <div class="d-flex justify-content-center">
+            <img class="m-auto rounded team-member-img" src="./assets/img/Kuehl+Ryan.png" alt="Ryan Kuehl" />
+          </div>
+          
           <h5 class="text-center mt-5 mb-2">Ryan Kuehl</h5>
-          <p class="text-start">
+          <p class="text-justify">
             Combining a 12 year career in the NFL with a decade of experience in a variety of leadership roles at Under
             Armour, Ryan brings an authentic and experienced strategic point of view to aid operators and enterprise
             leaders.
@@ -134,8 +142,32 @@
             thoughtful growth mindset and unique experience to Chainable’s broad portfolio of companies.
           </p>
         </div>
+
+        <div class="team-member card shadow p-4">
+          <div class="d-flex justify-content-center">
+            <img class="m-auto rounded team-member-img" src="./assets/img/Penn-Bryan-20240603.png" height="361" width="300" alt="Bryan Penn" />
+          </div>
+          
+          <h5 class="text-center mt-5 mb-2">Bryan Penn</h5>
+          <p class="text-start">
+            Bringing a background of client support and project management, Bryan oversees product development and partner 
+            relations at Upside. His decade of experience in 
+            the service industry gives him a unique perspective on effectively connecting businesses with their customers.
+            <br>
+            <br>
+            Bryan is dedicated to ensuring the success of each client, and his commitment to excellence and keen eye for
+             detail make him an invaluable asset to Upside Games, driving the platform's continuous growth and success.
+          </p>
+        </div>
+
+
       </div>
+      
+
     </div>
+
+
+  
   </main>
 
   <footer>
@@ -147,7 +179,10 @@
             <li class="mt-4">
               <a href="http://play.upsidegames.com" target="_blank">Play Now</a>
             </li>
-            <li class="nav-item mt-4 dropdown">
+            <li class="mt-4">
+              <a class="dropdown-item" href="./how-it-works.html">How it works</a>
+            </li>
+            <!-- <li class="nav-item mt-4 dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 How it works
@@ -158,7 +193,7 @@
                 </li>
                 <li><a class="dropdown-item" href="#">Users</a></li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div class="col-md-2">
@@ -171,18 +206,16 @@
         <div class="col-md-2">
           <h5 class="mt-5">Contact</h5>
           <ul>            
-            <li class="mt-4"><a href="#contact">Contact Us</a></li>
+            <li class="mt-4"><a href="/index.html#contact">Contact Us</a></li>
           </ul>
         </div>
-        <div class="col-md-3 mt-5">
-          <img src="./assets/img/instagram.svg" alt="" />
+        <div class="col-md-3 mt-5">          
           <a href="https://twitter.com/playupsidegames" target="_blank">
             <img src="./assets/img/twitter.svg" alt="" />
           </a>
           <a href="https://www.facebook.com/playupside" target="_blank">
             <img src="./assets/img/facebook.svg" alt="" />
-          </a>
-          <img src="./assets/img/linkedin.svg" alt="" />
+          </a>          
         </div>
       </div>
     </div>
