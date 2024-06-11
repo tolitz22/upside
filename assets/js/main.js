@@ -124,8 +124,12 @@ $(document).ready(function () {
     var xhr = new XMLHttpRequest();
   
     // Configure the request: GET method, URL
-    xhr.open('GET', 'https://gettournamentleaderboards-4sbyyp2mpq-uc.a.run.app', true);
-  
+    // staging
+    // xhr.open('GET', 'https://gettournamentleaderboards-4sbyyp2mpq-uc.a.run.app', true);
+    // prod
+    xhr.open('GET', 'https://gettournamentleaderboards-4qt3w6p6hq-uc.a.run.app', true);
+    
+
     // Set up a function to handle the response
     xhr.onload = function() {
         if (xhr.status >= 200 && xhr.status < 300) {
