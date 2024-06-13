@@ -863,6 +863,11 @@ color: #000;
   text-align: end;
 }
 
+.edited-banner{
+  width: 1280px;
+  height: auto;
+}
+
 
 .works-container img{
   width: 19vw;
