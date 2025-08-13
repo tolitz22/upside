@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/img/rectangle_755.svg"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Upside - Tailwind Refactor</title>
+    <style>
+      @keyframes shimmer {
+        0% {
+          background-position: -200% 0;
+        }
+        100% {
+          background-position: 200% 0;
+        }
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+      .shimmer-btn {
+        background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+        background-size: 200% 100%;
+        animation: shimmer 2s infinite;
+      }
+
+      .glow-btn {
+        animation: pulse-glow 2s infinite;
+      }
+
+      .float-animation {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .gradient-border {
+        background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b);
+        background-size: 400% 400%;
+        animation: shimmer 3s ease infinite;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased text-gray-800">
+    <!-- Navbar -->
+    <header
+      class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 shadow-lg border-b border-gray-100"
+    >
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <a
+          href="./index.html"
+          class="transform hover:scale-105 transition-transform duration-200"
+        >
+          <img
+            src="./assets/img/upside_logo.png"
+            alt="Upside Logo"
+            class="h-12"
+          />
+        </a>
+        <nav class="hidden md:flex gap-8 text-sm font-medium items-center">
+          <a
+            href="./index.html"
+            class="relative group text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          >
+            Home
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="./about-us.html"
+            class="relative group text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          >
+            About Us
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="./how-it-works.html"
+            class="relative group text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          >
+            How it works
+            <span
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"
+            ></span>
+          </a>
+          <a
+            href="https://play.upsidegames.com/membership?clientID=CollegeUniversity"
+            target="_blank"
+            class="px-6 py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            SEE DEMO
+          </a>
+          <a
+            href="http://play.upsidegames.com"
+            target="_blank"
+            class="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-full hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl glow-btn"
+          >
+            PLAY NOW
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Alpine.js for interactivity -->
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Hero Carousel Section -->
+    <section
+      x-data="carousel()"
+      x-init="start()"
+      class="relative bg-black text-white overflow-hidden"
+    >
+      <div class="relative h-[700px]">
+        <template x-for="(slide, index) in slides" :key="index">
+          <div
+            class="absolute inset-0 transition-all duration-1000 ease-in-out"
+            :class="{ 'opacity-100 z-10 scale-100': currentIndex === index, 'opacity-0 z-0 scale-105': currentIndex !== index }"
+          >
+            <img :src="slide.image" alt="" class="w-full h-full object-cover" />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent py-16"
+            >
+              <div class="max-w-6xl mx-auto text-left">
+                <div class="max-w-4xl">
+                  <h2
+                    class="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+                    x-text="slide.title"
+                  ></h2>
+                  <p
+                    class="text-lg md:text-xl mb-8 leading-relaxed opacity-90"
+                    x-text="slide.description"
+                  ></p>
+                  <div class="flex flex-col sm:flex-row gap-4 max-w-md">
+                    <a
+                      href="#contact"
+                      class="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-lg hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 shadow-2xl w-full sm:w-auto"
+                    >
+                      <span class="relative z-10">Get in Touch</span>
+                      <div
+                        class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      >
+                        <script
+                          charset="utf-8"
+                          type="text/javascript"
+                          src="//js.hsforms.net/forms/embed/v2.js"
+                        ></script>
+                        <script>
+                          hbspt.forms.create({
+                            region: "na1",
+                            portalId: "46256032",
+                            formId: "1e70a165-b487-49c5-9969-f92f5f1bfca7",
+                            onFormReady: function () {
+                              // Get the iframe
+                              let iframe =
+                                document.getElementById("hs-form-iframe-0");
+
+                              // Check if the iframe content is accessible
+                              if (iframe.contentDocument) {
+                                // Access the document inside the iframe
+                                let iframeDocument =
+                                  iframe.contentDocument ||
+                                  iframe.contentWindow.document;
+                                // Select and change color of label elements inside the iframe
+                                let labels =
+                                  iframeDocument.querySelectorAll("label");
+                                labels.forEach((label) => {
+                                  label.style.color = "white";
+                                });
+
+                                let strongElement =
+                                  iframeDocument.querySelector("strong");
+                                if (strongElement) {
+                                  strongElement.style.color = "red"; // Change the color to your desired color
+                                }
+                              } else {
+                                console.log(
+                                  "Cannot access iframe content due to cross-origin restrictions."
+                                );
+                              }
+                            },
+                          });
+                        </script>
+                      </div>
+                    </a>
+                    <a
+                      href="http://play.upsidegames.com"
+                      target="_blank"
+                      class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transform hover:scale-105 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
+                    >
+                      Play Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>
+
+      <!-- Enhanced Navigation Buttons -->
+      <div class="absolute bottom-14 w-full z-20 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3">
+          <template x-for="(slide, index) in slides" :key="'nav-' + index">
+            <button
+              @click="goTo(index)"
+              class="relative group w-full px-6 py-4 font-bold rounded-lg border-2 transition-all duration-300 transform hover:scale-105 text-center"
+              :class="{ 
+              'bg-white text-black border-white shadow-lg': currentIndex === index,
+              'text-white border-white/70 hover:border-white hover:bg-white/10 backdrop-blur-sm': currentIndex !== index 
+            }"
+              x-text="slide.label"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                x-show="currentIndex !== index"
+              ></div>
+            </button>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Upside Advantage Section -->
+    <section class="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+        >
+          The Upside Advantage
+        </h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+          >
+            <div
+              class="mb-6 transform group-hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src="./assets/img/parnership_1.svg"
+                alt="Partnership"
+                class="mx-auto h-24"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">Partnership</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Team with Upside to engage your audience through fantasy
+              challenges you can build or customize.
+            </p>
+            <div class="mt-6">
+              <button
+                class="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full hover:from-blue-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+          >
+            <div
+              class="mb-6 transform group-hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src="./assets/img/entertainment_1.svg"
+                alt="Entertainment"
+                class="mx-auto h-24"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">Entertainment</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Create exciting experiences around game day to enhance enjoyment
+              and keep users coming back.
+            </p>
+            <div class="mt-6">
+              <button
+                class="px-6 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-full hover:from-purple-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl p-8 text-center transform hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+          >
+            <div
+              class="mb-6 transform group-hover:scale-110 transition-transform duration-300"
+            >
+              <img
+                src="./assets/img/money_1.svg"
+                alt="Engagement"
+                class="mx-auto h-24"
+              />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-gray-800">Engagement</h3>
+            <p class="text-gray-600 leading-relaxed">
+              With recurring challenges and prizes, Upside keeps users returning
+              with enthusiasm each week.
+            </p>
+            <div class="mt-6">
+              <button
+                class="px-6 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-full hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Tournaments Leaderboards -->
+    <div id="leaderboards" class="tournaments pt-16 pb-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-4xl font-bold mb-12 text-left bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+        >
+          Our Tournaments Leaderboards
+        </h2>
+        <div class="prize-container">
+          <div
+            class="leaderboard-carousel bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 border border-gray-200"
+          >
+            <div class="text-center">
+              <div
+                class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Tournament Leaderboards
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Dynamic content will be loaded here
+              </p>
+              <button
+                class="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                View All Tournaments
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="bg-gradient-to-br from-gray-50 to-gray-100 py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2
+          class="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+        >
+          What our users are saying
+        </h2>
+        <div class="grid gap-10 md:grid-cols-3">
+          <div
+            class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+          >
+            <div class="relative mb-6">
+              <img
+                src="./assets/img/image-costume.png"
+                class="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-blue-100 group-hover:ring-blue-200 transition-all duration-300"
+              />
+              <div
+                class="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-4 h-4 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed italic">
+              "Love Upside! So easy to play, you can make your picks from
+              anywhere. I usually win something every week!"
+            </p>
+            <p class="font-bold text-gray-800">— Katie K.</p>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+          >
+            <div class="relative mb-6">
+              <img
+                src="./assets/img/piggy-bank.png"
+                class="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-purple-100 group-hover:ring-purple-200 transition-all duration-300"
+              />
+              <div
+                class="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-4 h-4 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed italic">
+              "Awesome format. Unique challenges that make fantasy gaming fresh.
+              Been using it since 2019!"
+            </p>
+            <p class="font-bold text-gray-800">— Aaron D.</p>
+          </div>
+
+          <div
+            class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+          >
+            <div class="relative mb-6">
+              <img
+                src="./assets/img/image-car.png"
+                class="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-green-100 group-hover:ring-green-200 transition-all duration-300"
+              />
+              <div
+                class="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-4 h-4 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6 leading-relaxed italic">
+              "Even with a free account, I've won a bunch. It's fun and I love
+              the variety, from sports to politics."
+            </p>
+            <p class="font-bold text-gray-800">— Sandeep S.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section
+      id="contact"
+      class="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20"
+    >
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-4xl font-bold mb-4">Get in Touch</h3>
+        <p class="text-xl text-blue-100 mb-12">
+          Ready to elevate your engagement? Let's make it happen!
+        </p>
+
+        <div
+          id="hubspot-form"
+          class="mb-12 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+        >
+          <!-- Embed external HubSpot form -->
+          <script
+            charset="utf-8"
+            type="text/javascript"
+            src="//js.hsforms.net/forms/embed/v2.js"
+          ></script>
+          <script>
+            hbspt.forms.create({
+              region: "na1",
+              portalId: "46256032",
+              formId: "1e70a165-b487-49c5-9969-f92f5f1bfca7",
+            });
+          </script>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
+          <a
+            href="#top"
+            class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold rounded-full hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
+          >
+            <span class="relative z-10">BACK TO TOP</span>
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            ></div>
+          </a>
+
+          <a
+            href="http://play.upsidegames.com"
+            target="_blank"
+            class="inline-flex items-center px-8 py-4 border-2 border-white/50 text-white font-semibold rounded-full hover:bg-white hover:text-blue-900 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm hover:border-white"
+          >
+            Start Playing Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+      >
+        <div>
+          <h5
+            class="text-xl font-bold mb-6 text-white bg-clip-text"
+          >
+            Getting Started
+          </h5>
+          <ul class="space-y-3 text-gray-300">
+            <li>
+              <a
+                href="http://play.upsidegames.com"
+                target="_blank"
+                class="hover:text-blue-400 transition-colors duration-200 inline-flex items-center group"
+              >
+                Play Now
+                <svg
+                  class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-200"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./how-it-works.html"
+                class="hover:text-blue-400 transition-colors duration-200"
+                >How it works</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-xl font-bold mb-6 text-white bg-clip-text"
+          >
+            Company
+          </h5>
+          <ul class="space-y-3 text-gray-300">
+            <li>
+              <a
+                href="./about-us.html"
+                class="hover:text-purple-400 transition-colors duration-200"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-xl font-bold mb-6 text-white bg-clip-textt"
+          >
+            Contact
+          </h5>
+          <ul class="space-y-3 text-gray-300">
+            <li>
+              <a
+                href="#contact"
+                class="hover:text-green-400 transition-colors duration-200"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col">
+          <h5
+            class="text-xl font-bold mb-6 text-white bg-clip-text"
+          >
+            Follow Us
+          </h5>
+          <div class="flex gap-4">
+            <a
+              href="https://twitter.com/playupsidegames"
+              target="_blank"
+              class="group p-3 bg-gray-800 rounded-full hover:bg-blue-600 transform hover:scale-110 transition-all duration-300 shadow-lg"
+            >
+              <img
+                src="./assets/img/twitter.svg"
+                alt="Twitter"
+                class="h-6 w-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/playupside"
+              target="_blank"
+              class="group p-3 bg-gray-800 rounded-full hover:bg-blue-700 transform hover:scale-110 transition-all duration-300 shadow-lg"
+            >
+              <img
+                src="./assets/img/facebook.svg"
+                alt="Facebook"
+                class="h-6 w-6 group-hover:brightness-0 group-hover:invert transition-all duration-300"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 mt-12 pt-8 border-t border-gray-700">
+        <div class="text-center text-gray-400">
+          <p>&copy; 2024 Upside Games. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Alpine Carousel Script -->
+    <script>
+      function carousel() {
+        return {
+          currentIndex: 0,
+          interval: null,
+          slides: [
+            {
+              label: "Universities",
+              image: "./assets/img/edited-banner.png",
+              title: "The Games Within the Games",
+              description:
+                "Elevate your fans to the next level with Upside! Easily accessed from your desktop, phone, or tablet, Upside offers unique fantasy challenges around all your favorite college sports. Support your university's alumni association, booster club, athlete unions and more with games and tournaments of your favorite student athletes!",
+            },
+            {
+              label: "Restaurants & Bars",
+              image: "./assets/img/restaurant_2_1.png",
+              title: "Keep 'Em Coming Back",
+              description:
+                "From sports bars to Michelin stars, Upside gives your customers yet another reason to return. Select unique redeemable prizes and give your patrons custom games to play to take engagement to the next level.",
+            },
+            {
+              label: "Corporate",
+              image: "./assets/img/corporate_1.png",
+              title: "Liven Up Your Workplace",
+              description:
+                "Nothing boosts employee morale and engagement like play-to-win competitions. Give your office something to talk about—and encourage participation with unique prizes that you choose!",
+            },
+            {
+              label: "Organizations",
+              image: "./assets/img/organization_1.png",
+              title: "Do More for Your Organization",
+              description:
+                "Clubs, unions, associations—whatever the reason for getting together, get together better with Upside! Let us set up games and tournaments for your organization, and see engagement soar!",
+            },
+          ],
+          start() {
+            this.interval = setInterval(() => this.next(), 5000);
+          },
+          stop() {
+            clearInterval(this.interval);
+          },
+          next() {
+            this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+          },
+          goTo(index) {
+            this.currentIndex = index;
+            this.stop();
+            this.start();
+          },
+        };
+      }
+    </script>
+  </body>
+</html>
