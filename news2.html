@@ -49,7 +49,7 @@
       margin-bottom: clamp(1.25rem, 3vw, 2rem);
     }
     .news-title {
-      color: var(--accent);
+      color: var(--surface);
       font-weight: 800;
       letter-spacing: 0.4px;
       font-size: clamp(1.75rem, 4vw, 2.25rem);
@@ -93,7 +93,7 @@
       border: 0; border-radius: 999px; padding: .6rem .95rem; cursor: pointer;
       transition: filter 160ms ease; box-shadow: 0 6px 14px rgba(243,106,42,.25);
     }
-    .cta:hover { filter: brightness(0.98); }
+    .cta:hover { filter: brightness(0.98); color:var(--surface-2); background-color: var(--ink);}
     .cta:active { transform: translateY(1px); }
 
     /* --- Utility --------------------------------------------------------- */
@@ -102,7 +102,7 @@
 </head>
 <body>
 
-      <div class="sticky-top bg-white" >
+    <div class="sticky-top bg-white" >
     <header class="container" id="top">
       <nav class="navbar navbar-expand-lg bg-white ">
         <div class="container-fluid d-flex">

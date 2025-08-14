@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="html-title">Loading… • News • Upside Games</title>
+  <meta id="html-description" name="description" content="Latest news from Upside Games." />
+    <meta name="description" content="Latest news and updates from Upside Games." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <style>
+    :root {
+      --accent:#f36a2a; /* orange */
+      --ink:#191930;    /* deep navy */
+      --surface:#edeef1;/* light */
+      --paper:#ffffff;
+      --muted:#5a5e6e;
+      --ring: rgba(243,106,42,.45);
+      --shadow: 0 14px 34px rgba(0,0,0,.18);
+
+      /* layout guards for ultra-wide */
+      --container: 1100px;
+      --article: 1000px;
+      --hero-max: 1200px; /* cap hero image width and CENTER it */
+    }
+
+    *,*::before,*::after{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;
+      line-height:1.65;
+      color:var(--ink);
+      background:var(--surface)
+    }
+    img{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    :focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:6px}
+
+    .container-fluid{
+        max-width: 1320px;
+    }
+
+    /* Header / breadcrumb */
+    .navwrap{background:var(--ink);color:#cfd2dd}
+    .nav{max-width:var(--container);margin:auto;padding:1rem}
+    .crumbs{display:flex;gap:.5rem;align-items:center;font-size:.9rem;flex-wrap:wrap}
+    .crumbs a{color:#cfd2dd}
+    .crumbs a:hover{color:#fff}
+    .sep{opacity:.6}
+
+    /* Hero */
+    .hero{position:relative;background:var(--ink);}
+    .hero-inner{max-width:var(--container);margin:auto;padding:clamp(1.25rem,5vw,2rem) 1rem 0}
+    .eyebrow{color:#cfd2dd;letter-spacing:.08em;text-transform:uppercase;font-weight:700;font-size:.8rem}
+    h1.title{color:var(--paper);margin:.25rem 0 0;font-weight:800;letter-spacing:.3px;font-size:clamp(1.75rem,4vw,2.5rem)}
+    .meta{color:#cfd2dd;font-size:.95rem;margin:.35rem 0 1rem}
+
+    /* CENTER the hero image on wide screens while preserving responsiveness */
+    .hero-media{
+      display:flex;               /* center child */
+      justify-content:center;     /* center horizontally */
+      background:var(--ink);
+      padding: 0 1rem 1rem;       /* breathing room at edges */
+    }
+    .hero-img{
+      width:100%;
+      max-width:var(--hero-max);  /* cap image width */
+      height:auto;
+      border-radius: 16px;
+      object-fit:cover;
+      object-position:center;
+      aspect-ratio: 16 / 9;
+      overflow:hidden;
+    }
+
+    /* Article */
+    .article{
+      max-width:var(--article);
+      width: 100%;
+      margin: 1rem auto 3rem;
+      /* background:var(--paper); */
+      /* border-radius:16px; */
+      /* box-shadow:var(--shadow); */
+      overflow:hidden
+    }
+    .article .body{padding:clamp(1rem,4vw,1.5rem)}
+    .article p{margin:0 0 1rem;color:#2a2e3b}
+    .lead{font-size:1.15rem;color:#222;}
+
+    /* Content blocks */
+    .figure{
+      margin:1rem 0;
+      border-radius:12px;
+      overflow:hidden;
+      background:#d9dce4;
+    }
+    /* CENTER article images when screen is wide */
+    .figure img{
+      margin: 0 auto;                 /* center the image */
+      max-width: min(100%, 1000px);   /* cap width on ultra-wide */
+      width:100%;
+      height:auto;
+    }
+    .caption{font-size:.85rem;color:var(--muted);padding:.5rem 0;text-align:center}
+    blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:#fff4ed;border-radius:8px;color:#4a3a2f}
+
+    /* Share / tags */
+    .bar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;border-top:1px solid #eceff3;padding:.75rem;margin-top:1.25rem}
+    .tags{display:flex;gap:.5rem;flex-wrap:wrap}
+    .tag{background:#f6f7fa;border:1px solid #e1e5ee;border-radius:999px;padding:.35rem .7rem;font-size:.85rem;color:#3a3f50}
+    .share{display:flex;gap:.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;border:1px solid #e1e5ee;background:#fff;padding:.5rem .8rem;font-weight:700}
+    .btn-cta{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 8px 16px rgba(243,106,42,.25)}
+    .btn:hover{background:#f6f7fa;border-color:#e1e5ee;color:var(--ink)}
+    /* Related */
+    .related{max-width:var(--container);margin:0 auto 3rem;padding:0 1rem}
+    .related h3{color:var(--ink);margin:0 0 .75rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+    .card{grid-column:span 12;background:var(--paper);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.7)}
+    @media(min-width:720px){.card{grid-column:span 6}}
+    @media(min-width:1024px){.card{grid-column:span 4}}
+    .card .media{aspect-ratio:16/9;background:#d9dce4}
+    .card .body{padding:1rem}
+    .card .headline{font-weight:750;margin:0 0 .4rem}
+
+    .card .headline:hover a{color:var(--accent);text-decoration:underline}
+
+    /* Footer back link */
+    .foot{max-width:var(--container);margin:0 auto 4rem;padding:0 1rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap; width: 100%;}
+    .back{display:inline-flex;gap:.5rem;align-items:center;color:var(--accent);font-weight:800}
+    .back:hover{color:var(--ink);}
+  </style>
+
+  <!-- JSON-LD Structured Data: will be populated dynamically from API -->
+  <script id="jsonld" type="application/ld+json">{}</script>
+</head>
+<body>
+
+<div class="sticky-top bg-white" >
+    <header class="nav-container" id="top">
+      <nav class="navbar navbar-expand-lg bg-white ">
+        <div class="container-fluid d-flex">
+          <a href="./index.html">
+            <img src="./assets/img/upside_logo.png" alt="upside logo company" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./about-us.html">About Us</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a id="leaderboards-link" class="nav-link" href="#leaderboards">Leaderboards</a>
+  
+              </li> -->
+              <li class="nav-item visually-hidden">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+  
+              <li class="nav-item ">
+                <a class="nav-link" href="./how-it-works.html">How it works</a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" target="_blank" href="https://play.upsidegames.com/membership?clientID=CollegeUniversity">SEE DEMO</a>
+              </li>
+  
+              <li class="nav-item align-self-center" >
+                <a href="http://play.upsidegames.com"  target="_blank" class="nav-link play-now">PLAY NOW</a>
+              </li>
+            </ul>        
+          </div>
+        </div>
+      </nav>
+    </header>
+    </div>
+
+
+
+  <div class="navwrap">
+    <nav class="nav" aria-label="Breadcrumb">
+      <div class="crumbs">
+        <a href="/" class="home">Home</a><span class="sep">›</span>
+        <a href="news.html">News</a><span class="sep">›</span>
+        <span id="crumb-current" aria-current="page">Loading…</span>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">News</div>
+      <h1 id="post-title" class="title">Loading…</h1>
+      <div class="meta">By <span id="post-author">—</span> · <time id="post-date" datetime="">—</time></div>
+    </div>
+    <figure class="hero-media">
+      <!-- CENTERED hero image on wide screens -->
+      <img id="post-hero" class="hero-img" src="" alt="" width="1440" height="810"/>
+    </figure>
+  </header>
+
+  <main class="article" id="main-content">
+    <article>
+      <div id="post-body" class="body">
+        <!-- Content blocks from API will render here -->
+      </div>
+
+      <div class="bar">
+        <div id="post-tags" class="tags" aria-label="Tags"></div>
+        <div class="share" aria-label="Share">
+          <a class="btn" id="share-x" href="#" aria-label="Share on X">Share</a>
+          <a class="btn" id="share-fb" href="#" aria-label="Share on Facebook">Facebook</a>
+          <!-- <a class="btn btn-cta" id="post-cta" href="#" aria-label="Primary call to action" style="display:none"></a> -->
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <section class="related" aria-labelledby="related-heading">
+    <h3 id="related-heading">Related stories</h3>
+    <div id="related-grid" class="grid" role="list"></div>
+  </section>
+
+  <div class="foot">
+    <a class="back" href="news.html" aria-label="Back to News">← Back to News</a>
+    <div class="nextprev">
+      <a class="back" id="next-link" href="#" style="display:none">Next story →</a>
+    </div>
+  </div>
+
+  <script>
+    // --- Helpers -----------------------------------------------------------
+    const qs = (sel, el = document) => el.querySelector(sel);
+    const qsa = (sel, el = document) => Array.from(el.querySelectorAll(sel));
+    const formatDate = iso => {
+      try {
+        const d = new Date(iso);
+        return d.toLocaleDateString(undefined, {year:'numeric', month:'short', day:'numeric'});
+      } catch { return iso || ''; }
+    };
+    const getSlug = () => {
+      const url = new URL(window.location.href);
+      const slugParam = url.searchParams.get('slug');
+      if (slugParam) return slugParam;
+      // fallback: derive from filename (e.g., /news/my-article.html)
+      const path = url.pathname;
+      const name = path.substring(path.lastIndexOf('/')+1);
+      return name.replace(/\.html?$/,'') || 'upside-launches-college-bracket-challenge';
+    };
+
+    // Minimal block renderer for a "standard blog api response"
+    // Accepts body as an array of blocks:
+    // {type:'paragraph'|'image'|'quote'|'heading', text?, src?, alt?, caption?, level?}
+    function renderBody(container, blocks = []) {
+      container.innerHTML = '';
+      blocks.forEach(block => {
+        if (!block || !block.type) return;
+        switch (block.type) {
+          case 'paragraph': {
+            const p = document.createElement('p');
+            if (block.lead) p.className = 'lead';
+            p.textContent = block.text || '';
+            container.appendChild(p);
+            break;
+          }
+          case 'heading': {
+            const lvl = Math.min(Math.max(block.level || 2, 2), 4);
+            const h = document.createElement('h' + lvl);
+            h.textContent = block.text || '';
+            container.appendChild(h);
+            break;
+          }
+          case 'image': {
+            const fig = document.createElement('figure');
+            fig.className = 'figure';
+            const img = document.createElement('img');
+            img.src = block.src || '';
+            img.alt = block.alt || '';
+            img.loading = 'lazy';
+            fig.appendChild(img);
+            if (block.caption) {
+              const cap = document.createElement('figcaption');
+              cap.className = 'caption';
+              cap.textContent = block.caption;
+              fig.appendChild(cap);
+            }
+            container.appendChild(fig);
+            break;
+          }
+          case 'quote': {
+            const bq = document.createElement('blockquote');
+            bq.textContent = block.text || '';
+            container.appendChild(bq);
+            break;
+          }
+        }
+      });
+    }
+
+    function setTags(container, tags = []) {
+      container.innerHTML = '';
+      tags.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.textContent = t;
+        container.appendChild(span);
+      });
+    }
+
+    function setRelated(container, related = []) {
+      container.innerHTML = '';
+      related.slice(0, 6).forEach(item => {
+        const art = document.createElement('article');
+        art.className = 'card';
+        art.setAttribute('role','listitem');
+
+        const fig = document.createElement('figure');
+        fig.className = 'media';
+        const img = document.createElement('img');
+        img.src = (item.image && item.image.src) || 'https://picsum.photos/seed/related/800/450';
+        img.alt = (item.image && item.image.alt) || '';
+        img.width = 800; img.height = 450; img.loading = 'lazy';
+        fig.appendChild(img);
+
+        const body = document.createElement('div');
+        body.className = 'body';
+        const h4 = document.createElement('h4');
+        h4.className = 'headline';
+        const a = document.createElement('a');
+        a.href = item.url || ('?slug=' + encodeURIComponent(item.slug || ''));
+        a.textContent = item.title || 'Untitled';
+        h4.appendChild(a);
+        const p = document.createElement('p');
+        p.className = 'snippet';
+        p.textContent = item.excerpt || '';
+        body.appendChild(h4); body.appendChild(p);
+
+        art.appendChild(fig); art.appendChild(body);
+        container.appendChild(art);
+      });
+    }
+
+    function updateJsonLd(data) {
+      const ld = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": data.title || "",
+        "datePublished": data.publishedAt || "",
+        "dateModified": data.updatedAt || data.publishedAt || "",
+        "author": {"@type":"Organization","name": (data.author && data.author.name) || "Upside Games"},
+        "publisher": {
+          "@type":"Organization",
+          "name":"Upside Games",
+          "logo":{"@type":"ImageObject","url": (data.publisherLogo || "https://picsum.photos/seed/upside-logo/120/120"), "width":120, "height":120}
+        },
+        "image": [ (data.hero && data.hero.image) || "" ],
+        "description": data.description || ""
+      };
+      qs('#jsonld').textContent = JSON.stringify(ld);
+    }
+
+    function setShareLinks(title, url) {
+      // You can replace with your preferred share URLs
+      qs('#share-x').href  = `https://x.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
+      qs('#share-fb').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    }
+
+    // --- Fetch logic -------------------------------------------------------
+    // We expect a "standard blog api response" like:
+    // {
+    //   "slug": "upside-launches-college-bracket-challenge",
+    //   "title": "Upside Launches College Bracket Challenge",
+    //   "description": "Short SEO description",
+    //   "publishedAt": "2025-08-10T08:00:00+08:00",
+    //   "updatedAt": "2025-08-10T08:00:00+08:00",
+    //   "author": {"name":"Editorial Team"},
+    //   "hero": {"image":"https://...", "alt":"..."},
+    //   "cta": {"label":"Start Your Bracket", "url":"#"},
+    //   "tags": ["Product","Release","Bracket"],
+    //   "body": [ {type:"paragraph", text:"..."}, {type:"image", src:"...", alt:"...", caption:"..."}, ... ],
+    //   "related": [ {title:"...", slug:"...", url:"/news/...", image:{src:"...", alt:"..."}, excerpt:"..."} ],
+    //   "next": {"title":"...", "slug":"...", "url":"/news/..."}
+    // }
+    async function loadPost() {
+      const slug = getSlug();
+      const API_BASE = '/api/news'; // <- adjust this to your backend route
+
+      let data;
+      try {
+        const res = await fetch(`${API_BASE}/${encodeURIComponent(slug)}.json`, {credentials:'omit'});
+        if (!res.ok) throw new Error('Not found');
+        data = await res.json();
+      } catch {
+        // Fallback demo data (placeholder) so the page still renders
+        data = {
+          slug: 'upside-launches-college-bracket-challenge',
+          title: 'Upside Launches College Bracket Challenge',
+          description: 'Upside Games unveils a smarter, shareable college bracket challenge with real-time scoring and leaderboards.',
+          publishedAt: '2025-08-10T08:00:00+08:00',
+          updatedAt: '2025-08-10T08:00:00+08:00',
+          author: { name: 'Editorial Team' },
+          hero: { image: 'https://picsum.photos/seed/upside1/1440/810', alt: 'Players celebrating a tournament win under confetti' },
+          cta: { label: 'Start Your Bracket', url: '#' },
+          tags: ['Product','Release','Bracket'],
+          body: [
+            { type:'paragraph', lead:true, text:'Get ready for tip-off! Our brand-new bracket challenge brings smarter scoring, instant share links, and real-time leaderboards so friends, families, and offices can compete with ease.' },
+            { type:'paragraph', text:'Built with feedback from thousands of players, the new experience introduces confidence picks, live upset multipliers, and a clean mobile-first design. You can create private pools, invite teammates, and track standings as games progress—no manual refresh needed.' },
+            { type:'image', src:'https://picsum.photos/seed/upside-ux/1200/800', alt:'Screenshot mock showing bracket UI and live leaderboard', caption:'A glance at the streamlined bracket UI and leaderboard components.' },
+            { type:'quote', text:'“We wanted a bracket that feels fair, fast, and fun—without the clutter. This release is a big step towards that.”' },
+            { type:'paragraph', text:'Administrators can toggle pool rules like scoring weights and tie-breakers, while players enjoy a frictionless sign-in and one-tap sharing. Accessibility improvements include higher contrast, keyboard-friendly navigation, and reduced-motion options for sensitive users.' },
+            { type:'image', src:'https://picsum.photos/seed/upside-stats/1200/750', alt:'Analytics dashboard with participation and engagement charts', caption:'Behind the scenes: engagement analytics and pool health metrics.' }
+          ],
+          related: [
+            { title:'Power Tournament Debuts for Corporate Teams', slug:'power-tournament-corporate', url:'?slug=power-tournament-corporate', image:{src:'https://picsum.photos/seed/up2/800/450', alt:'Corporate teams competing'}, excerpt:'A fresh format designed to boost morale and team spirit—schedule, compete, and climb leaderboards.' },
+            { title:'Mobile App Update: Faster Schedules & Stats', slug:'mobile-app-update', url:'?slug=mobile-app-update', image:{src:'https://picsum.photos/seed/up3/800/450', alt:'Mobile app screen'}, excerpt:'We sped up loading by 40% and added quick filters—find times and stats in fewer taps.' },
+            { title:'Community Spotlight: Weekend League Highlights', slug:'community-spotlight-weekend', url:'?slug=community-spotlight-weekend', image:{src:'https://picsum.photos/seed/up4/800/450', alt:'Community event'}, excerpt:'From clutch plays to comeback wins—see standout moments submitted by our community.' }
+          ],
+          next: { title:'Season Awards Voting Now Live', slug:'season-awards-voting', url:'?slug=season-awards-voting' }
+        };
+      }
+
+      // Populate head + hero
+      qs('#html-title').textContent = `${data.title} • News • Upside Games`;
+      qs('#html-description').setAttribute('content', data.description || '');
+      qs('#crumb-current').textContent = data.title || 'News';
+      qs('#post-title').textContent = data.title || '';
+      qs('#post-author').textContent = (data.author && data.author.name) || 'Upside Games';
+      const dt = data.publishedAt || data.updatedAt || '';
+      qs('#post-date').setAttribute('datetime', dt);
+      qs('#post-date').textContent = dt ? formatDate(dt) : '';
+
+      const hero = qs('#post-hero');
+      hero.src = (data.hero && data.hero.image) || '';
+      hero.alt = (data.hero && data.hero.alt) || '';
+
+      // Body, tags, related
+      renderBody(qs('#post-body'), data.body || []);
+      setTags(qs('#post-tags'), data.tags || []);
+      setRelated(qs('#related-grid'), data.related || []);
+
+      // CTA (optional from API)
+      const cta = data.cta;
+    //   const ctaEl = qs('#post-cta');
+    //   if (cta && cta.label && cta.url) {
+    //     ctaEl.style.display = 'inline-flex';
+    //     ctaEl.textContent = cta.label;
+    //     ctaEl.href = cta.url;
+    //   } else {
+    //     ctaEl.style.display = 'none';
+    //   }
+
+      // Next link (optional)
+      const nextEl = qs('#next-link');
+      if (data.next && (data.next.url || data.next.slug)) {
+        nextEl.style.display = 'inline-flex';
+        nextEl.href = data.next.url || ('?slug=' + encodeURIComponent(data.next.slug));
+        nextEl.textContent = (data.next.title ? `${data.next.title} →` : 'Next story →');
+      } else {
+        nextEl.style.display = 'none';
+      }
+
+      // Share links
+      setShareLinks(data.title || document.title, window.location.href);
+
+      // JSON-LD
+      updateJsonLd(data);
+    }
+
+    // Reduce motion preference
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) {
+      qsa('.card').forEach(c => c.style.transition = 'none');
+    }
+
+    // Initialize
+    loadPost();
+  </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upside Launches College Bracket Challenge • News • Upside Games</title>
+  <meta name="description" content="Upside Games unveils a smarter, shareable college bracket challenge with real‑time scoring and leaderboards." />
+  <style>
+    :root {
+      --accent:#f36a2a; /* orange */
+      --ink:#191930;    /* deep navy */
+      --surface:#edeef1;/* light */
+      --paper:#ffffff;
+      --muted:#5a5e6e;
+      --ring: rgba(243,106,42,.45);
+      --shadow: 0 14px 34px rgba(0,0,0,.18);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;line-height:1.65;color:var(--ink);background:var(--surface)}
+    img{display:block;max-width:100%;height:auto}
+    a{text-decoration:none;color:inherit}
+    :focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:6px}
+
+    /* Header / breadcrumb */
+    .navwrap{background:var(--ink);color:#cfd2dd}
+    .nav{max-width:1100px;margin:auto;padding:1rem}
+    .crumbs{display:flex;gap:.5rem;align-items:center;font-size:.9rem;flex-wrap:wrap}
+    .crumbs a{color:#cfd2dd}
+    .crumbs a:hover{color:#fff}
+    .sep{opacity:.6}
+
+    /* Hero */
+    .hero{position:relative;background:var(--ink);}
+    .hero-inner{max-width:1100px;margin:auto;padding:clamp(1.25rem,5vw,2rem) 1rem 0}
+    .eyebrow{color:#cfd2dd;letter-spacing:.08em;text-transform:uppercase;font-weight:700;font-size:.8rem}
+    h1.title{color:var(--accent);margin:.25rem 0 0;font-weight:800;letter-spacing:.3px;font-size:clamp(1.75rem,4vw,2.5rem)}
+    .meta{color:#cfd2dd;font-size:.95rem;margin:.35rem 0 1rem}
+    .hero-media{aspect-ratio:16/9;overflow:hidden;border-top-left-radius:16px;border-top-right-radius:16px}
+    /* .hero-img{max-width:1200px; width:100%;height:100%;object-fit:cover;object-position:center} */
+
+    /* Article */
+    .article{max-width:900px;margin: -40px auto 3rem; background:var(--paper); border-radius:16px; box-shadow:var(--shadow); overflow:hidden}
+    .article .body{padding:clamp(1rem,4vw,1.5rem)}
+    .article p{margin:0 0 1rem;color:#2a2e3b}
+    .lead{font-size:1.15rem;color:#222;}
+    .figure{margin:1rem 0;border-radius:12px;overflow:hidden;background:#d9dce4}
+    .caption{font-size:.85rem;color:var(--muted);padding:.5rem 0}
+    blockquote{margin:1rem 0;padding:1rem 1.25rem;border-left:4px solid var(--accent);background:#fff4ed;border-radius:8px;color:#4a3a2f}
+
+    /* Share / tags */
+    .bar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;border-top:1px solid #eceff3;padding-top:.75rem;margin-top:1.25rem}
+    .tags{display:flex;gap:.5rem;flex-wrap:wrap}
+    .tag{background:#f6f7fa;border:1px solid #e1e5ee;border-radius:999px;padding:.35rem .7rem;font-size:.85rem;color:#3a3f50}
+    .share{display:flex;gap:.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;border:1px solid #e1e5ee;background:#fff;padding:.5rem .8rem;font-weight:700}
+    .btn-cta{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 8px 16px rgba(243,106,42,.25)}
+
+    /* Related */
+    .related{max-width:1100px;margin:0 auto 3rem;padding:0 1rem}
+    .related h3{color:var(--ink);margin:0 0 .75rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+    .card{grid-column:span 12;background:var(--surface);border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.7)}
+    @media(min-width:720px){.card{grid-column:span 6}}
+    @media(min-width:1024px){.card{grid-column:span 4}}
+    .card .media{aspect-ratio:16/9;background:#d9dce4}
+    .card .body{padding:1rem}
+    .card .headline{font-weight:750;margin:0 0 .4rem}
+
+    /* Footer back link */
+    .foot{max-width:1100px;margin:0 auto 4rem;padding:0 1rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .back{display:inline-flex;gap:.5rem;align-items:center;color:var(--accent);font-weight:800}
+  </style>
+  
+  <!-- JSON-LD Structured Data: NewsArticle -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Upside Launches College Bracket Challenge",
+    "datePublished": "2025-08-10T08:00:00+08:00",
+    "dateModified": "2025-08-10T08:00:00+08:00",
+    "author": {"@type":"Organization","name":"Upside Games"},
+    "publisher": {"@type":"Organization","name":"Upside Games","logo":{"@type":"ImageObject","url":"https://picsum.photos/seed/upside-logo/120/120","width":120,"height":120}},
+    "image": [
+      "https://picsum.photos/seed/upside1/1200/630"
+    ],
+    "description": "Upside Games unveils a smarter, shareable college bracket challenge with real‑time scoring and leaderboards."
+  }
+  </script>
+</head>
+<body>
+  <div class="navwrap">
+    <nav class="nav" aria-label="Breadcrumb">
+      <div class="crumbs">
+        <a href="/" class="home">Home</a><span class="sep">›</span>
+        <a href="news.html">News</a><span class="sep">›</span>
+        <span aria-current="page">Upside Launches College Bracket Challenge</span>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">News</div>
+      <h1 class="title">Upside Launches College Bracket Challenge</h1>
+      <div class="meta">By Editorial Team · <time datetime="2025-08-10">Aug 10, 2025</time></div>
+    </div>
+    <figure class="hero-media">
+      <img class="hero-img" src="https://picsum.photos/seed/upside1/1440/810" alt="Players celebrating a tournament win under confetti" width="1440" height="810"/>
+    </figure>
+  </header>
+
+  <main class="article" id="main-content">
+    <article>
+      <div class="body">
+        <p class="lead">Get ready for tip‑off! Our brand‑new bracket challenge brings smarter scoring, instant share links, and real‑time leaderboards so friends, families, and offices can compete with ease.</p>
+        <p>Built with feedback from thousands of players, the new experience introduces <strong>confidence picks</strong>, <strong>live upset multipliers</strong>, and a <strong>clean mobile‑first design</strong>. You can create private pools, invite teammates, and track standings as games progress—no manual refresh needed.</p>
+
+        <div class="figure">
+          <img src="https://picsum.photos/seed/upside-ux/1200/800" alt="Screenshot mock showing bracket UI and live leaderboard" width="1200" height="800"/>
+        </div>
+        <div class="caption">A glance at the streamlined bracket UI and leaderboard components.</div>
+
+        <blockquote>
+          “We wanted a bracket that feels fair, fast, and fun—without the clutter. This release is a big step towards that.”
+        </blockquote>
+
+        <p>Administrators can toggle pool rules like scoring weights and tie‑breakers, while players enjoy a frictionless sign‑in and one‑tap sharing. Accessibility improvements include higher contrast, keyboard‑friendly navigation, and reduced‑motion options for sensitive users.</p>
+
+        <div class="figure">
+          <img src="https://picsum.photos/seed/upside-stats/1200/750" alt="Analytics dashboard with participation and engagement charts" width="1200" height="750"/>
+        </div>
+        <div class="caption">Behind the scenes: engagement analytics and pool health metrics.</div>
+
+        <div class="bar">
+          <div class="tags" aria-label="Tags">
+            <span class="tag">Product</span>
+            <span class="tag">Release</span>
+            <span class="tag">Bracket</span>
+          </div>
+          <div class="share" aria-label="Share">
+            <a class="btn" href="#" aria-label="Share on X">Share</a>
+            <a class="btn" href="#" aria-label="Share on Facebook">Facebook</a>
+            <a class="btn btn-cta" href="#" aria-label="Start your bracket">Start Your Bracket</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <section class="related" aria-labelledby="related-heading">
+    <h3 id="related-heading">Related stories</h3>
+    <div class="grid">
+      <article class="card">
+        <figure class="media"><img src="https://picsum.photos/seed/up2/800/450" alt="Office teammates playing in a friendly competition" width="800" height="450"></figure>
+        <div class="body">
+          <h4 class="headline"><a href="news-article.html#alt">Power Tournament Debuts for Corporate Teams</a></h4>
+          <p class="snippet">A fresh format designed to boost morale and team spirit—schedule, compete, and climb leaderboards.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="media"><img src="https://picsum.photos/seed/up3/800/450" alt="Mobile screen showing app" width="800" height="450"></figure>
+        <div class="body">
+          <h4 class="headline"><a href="#">Mobile App Update: Faster Schedules & Stats</a></h4>
+          <p class="snippet">We sped up loading by 40% and added quick filters—find times and stats in fewer taps.</p>
+        </div>
+      </article>
+      <article class="card">
+        <figure class="media"><img src="https://picsum.photos/seed/up4/800/450" alt="Community event photo" width="800" height="450"></figure>
+        <div class="body">
+          <h4 class="headline"><a href="#">Community Spotlight: Weekend League Highlights</a></h4>
+          <p class="snippet">From clutch plays to comeback wins—see standout moments submitted by our community.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="foot">
+    <a class="back" href="news.html" aria-label="Back to News">← Back to News</a>
+    <div class="nextprev">
+      <a class="back" href="#">Next story →</a>
+    </div>
+  </div>
+
+  <script>
+    // Reduce motion preference
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) {
+      document.querySelectorAll('.card').forEach(c => c.style.transition = 'none');
+    }
+  </script>
+</body>
+</html>
