@@ -1,254 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News • Upside Games</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News • Upside Games</title>
   <meta name="description" content="Latest news and updates from Upside Games." />
   <link rel="shortcut icon" href="./assets/img/rectangle_755.svg" type="image/x-icon" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">  
+  
+  <style>
+    /* --- Theme ----------------------------------------------------------- */
+    :root {
+      --accent: #f36a2a;   /* vibrant orange */
+      --ink:    #191930;   /* deep navy */
+      --surface:#edeef1;   /* soft light */
+      --surface-2: #ffffff; /* card inner surface */
+      --muted:  #5a5e6e;   /* supporting text */
+      --ring:   rgba(243, 106, 42, 0.45);
+      --shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* --- Base reset (minimal) ------------------------------------------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { color-scheme: light; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--surface);
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    :focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; border-radius: 6px; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #191930 0%, #2a2a45 50%, #191930 100%);
-            min-height: 100vh;            
-        }
+    /* --- Section: News --------------------------------------------------- */
+    .news-section {
+      background: var(--ink);
+      padding: clamp(2rem, 5vw, 4rem) 1rem;
+    }
+    .news-wrap { max-width: 1100px; margin-inline: auto; }
+    .news-header {
+      display: flex; align-items: end; justify-content: space-between; gap: 1rem;
+      margin-bottom: clamp(1.25rem, 3vw, 2rem);
+    }
+    .news-title {
+      color: var(--surface);
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      margin: 0;
+    }
+    .news-subtitle { color: #cfd2dd; margin: 0; font-size: 0.95rem; }
 
-        .nav-container{
-            max-width: 1205px;
-            background: rgba(237, 238, 241, 0.98);
-            margin: 0 auto;
-        }
+    /* --- Cards grid ------------------------------------------------------ */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+    /* 3-up on desktop, 2-up on tablet, 1-up on mobile */
+    .card { grid-column: span 12; }
+    @media (min-width: 700px) { .card { grid-column: span 6; } }
+    @media (min-width: 1024px){ .card { grid-column: span 4; } }
 
-        .news-container {
-            max-width: 1190px;
-            margin: 10px auto;
-            background: rgba(237, 238, 241, 0.98);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            animation: slideUp 0.8s ease-out;
-        }
+    .card {
+      background: var(--surface);
+      border-radius: 16px;
+      overflow: clip;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .media { aspect-ratio: 16 / 9; background: #d9dce4; }
+    .body  { padding: 1rem; }
+    .headline { font-weight: 750; margin: 0 0 .5rem; font-size: 1.05rem; color: var(--ink); }
+    .snippet { margin: 0 0 0.75rem; color: var(--muted); }
 
-        .news-header {
-            background: linear-gradient(135deg, #191930 0%, #f36a2a 100%);
-            color: #edeef1;
-            padding: 3rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+    .meta {
+      display: flex; align-items: center; justify-content: space-between; gap: .5rem;
+      padding: 0 1rem 1rem; color: #6b7184; font-size: .85rem;
+    }
 
-        .news-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-        }
+    .cta {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--accent); color: white; font-weight: 700;
+      border: 0; border-radius: 999px; padding: .6rem .95rem; cursor: pointer;
+      transition: filter 160ms ease; box-shadow: 0 6px 14px rgba(243,106,42,.25);
+    }
+    .cta:hover { filter: brightness(0.98); color:var(--surface-2); background-color: var(--ink);}
+    .cta:active { transform: translateY(1px); }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        .news-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(45deg, #edeef1, #f36a2a);
-            background-clip: text;
-            -webkit-background-clip: text;
-            /* -webkit-text-fill-color: transparent; */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            position: relative;
-            z-index: 1;
-        }
-
-        .news-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-        }
-
-        .news-grid {
-            padding: 3rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .news-card {
-            background: #edeef1;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(25, 25, 48, 0.15);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            position: relative;
-        }
-
-        .news-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(25, 25, 48, 0.25);
-        }
-
-        .news-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #f36a2a, #191930, #f36a2a);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .news-card:hover::before {
-            opacity: 1;
-        }
-
-        .news-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .news-card:hover .news-image {
-            transform: scale(1.05);
-        }
-
-        .news-content {
-            padding: 1.5rem;
-        }
-
-        .news-headline {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #191930;
-            margin-bottom: 0.75rem;
-            line-height: 1.3;
-            transition: color 0.3s ease;
-        }
-
-        .news-card:hover .news-headline {
-            color: #f36a2a;
-        }
-
-        .news-text {
-            color: #191930;
-            opacity: 0.8;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .news-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(25, 25, 48, 0.1);
-            font-size: 0.85rem;
-            color: #191930;
-            opacity: 0.7;
-        }
-
-        .news-date {
-            font-weight: 500;
-        }
-
-        .news-category {
-            background: linear-gradient(135deg, #f36a2a, #ff8557);
-            color: #edeef1;
-            padding: 0.25rem 0.75rem;
-            border-radius: 12px;
-            font-weight: 500;
-            font-size: 0.8rem;
-        }
-
-        .featured-card {
-            grid-column: span 2;
-        }
-
-        .featured-card .news-image {
-            height: 300px;
-        }
-
-        .featured-card .news-headline {
-            font-size: 1.8rem;
-        }
-
-        @media (max-width: 768px) {
-
-
-            .news-title {
-                font-size: 2.5rem;
-            }
-
-            .news-grid {
-                grid-template-columns: 1fr;
-                padding: 2rem 1rem;
-            }
-
-            .featured-card {
-                grid-column: span 1;
-            }
-
-            .featured-card .news-image {
-                height: 200px;
-            }
-
-            .featured-card .news-headline {
-                font-size: 1.4rem;
-            }
-        }
-
-        .loading-shimmer {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        }
-    </style>
+    /* --- Utility --------------------------------------------------------- */
+    .visually-hidden { position: absolute !important; clip: rect(1px,1px,1px,1px); clip-path: inset(50%); height: 1px; width: 1px; overflow: hidden; white-space: nowrap; }
+  </style>
 </head>
 <body>
 
-      <div class="sticky-top bg-white" >
-    <header class="nav-container" id="top">
+    <div class="sticky-top bg-white" >
+    <header class="container" id="top">
       <nav class="navbar navbar-expand-lg bg-white ">
         <div class="container-fluid d-flex">
           <a href="./index.html">
@@ -290,126 +145,123 @@
         </div>
       </nav>
     </header>
+  
+  </div>
+
+  <!-- News Section -->
+  <section class="news-section" aria-labelledby="news-heading">
+    <div class="news-wrap">
+      <header class="news-header">
+        <h1 id="news-heading" class="news-title">News</h1>
+        <p class="news-subtitle">Latest updates, launches, and stories from Upside Games</p>
+      </header>
+
+      <div class="grid" role="list">
+        <!-- Card 1 -->
+        <article class="card" role="listitem">
+          <figure class="media">
+            <img src="https://picsum.photos/seed/upside1/800/450" alt="Players celebrating a tournament win" loading="lazy" width="800" height="450" />
+          </figure>
+          <div class="body">
+            <h2 class="headline">Upside Launches College Bracket Challenge</h2>
+            <p class="snippet">Tip-off your predictions! Our new bracket challenge brings smarter scoring and shareable brackets for friendly rivalries.</p>
+            <a class="cta" href="#" aria-label="Read more about Upside Launches College Bracket Challenge">Read More</a>
+          </div>
+          <div class="meta">
+            <span>By Editorial Team</span>
+            <time datetime="2025-08-10">Aug 10, 2025</time>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" role="listitem">
+          <figure class="media">
+            <img src="https://picsum.photos/seed/upside2/800/450" alt="Office teammates playing in a friendly competition" loading="lazy" width="800" height="450" />
+          </figure>
+          <div class="body">
+            <h2 class="headline">Power Tournament Debuts for Corporate Teams</h2>
+            <p class="snippet">A fresh format designed to boost morale and team spirit—schedule, compete, and climb real‑time leaderboards.</p>
+            <a class="cta" href="#" aria-label="Read more about Power Tournament Debuts for Corporate Teams">Read More</a>
+          </div>
+          <div class="meta">
+            <span>By Editorial Team</span>
+            <time datetime="2025-08-05">Aug 5, 2025</time>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" role="listitem">
+          <figure class="media">
+            <img src="https://picsum.photos/seed/upside3/800/450" alt="Mobile screen showing the Upside Games app" loading="lazy" width="800" height="450" />
+          </figure>
+          <div class="body">
+            <h2 class="headline">Mobile App Update: Faster Schedules & Stats</h2>
+            <p class="snippet">We sped up loading by 40% and added quick filters—find your match times and player stats in fewer taps.</p>
+            <a class="cta" href="#" aria-label="Read more about Mobile App Update">Read More</a>
+          </div>
+          <div class="meta">
+            <span>By Editorial Team</span>
+            <time datetime="2025-08-01">Aug 1, 2025</time>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" role="listitem">
+          <figure class="media">
+            <img src="https://picsum.photos/seed/upside4/800/450" alt="Community event photo with cheering crowd" loading="lazy" width="800" height="450" />
+          </figure>
+          <div class="body">
+            <h2 class="headline">Community Spotlight: Weekend League Highlights</h2>
+            <p class="snippet">From clutch plays to comeback wins—see standout moments submitted by our community.</p>
+            <a class="cta" href="#" aria-label="Read more about Community Spotlight">Read More</a>
+          </div>
+          <div class="meta">
+            <span>By Editorial Team</span>
+            <time datetime="2025-07-28">Jul 28, 2025</time>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card" role="listitem">
+          <figure class="media">
+            <img src="https://picsum.photos/seed/upside5/800/450" alt="Coach talking strategy with players" loading="lazy" width="800" height="450" />
+          </figure>
+          <div class="body">
+            <h2 class="headline">Coaching Tools Beta Opens to Early Access</h2>
+            <p class="snippet">Drills, plays, and practice plans—get early access to our coaching toolkit and help shape the roadmap.</p>
+            <a class="cta" href="#" aria-label="Read more about Coaching Tools Beta">Read More</a>
+          </div>
+          <div class="meta">
+            <span>By Editorial Team</span>
+            <time datetime="2025-07-22">Jul 22, 2025</time>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card" role="listitem">
+          <figure class="media">
+            <img src="https://picsum.photos/seed/upside6/800/450" alt="Trophy on a podium under stadium lights" loading="lazy" width="800" height="450" />
+          </figure>
+          <div class="body">
+            <h2 class="headline">Season Awards Voting Now Live</h2>
+            <p class="snippet">Cast your vote for MVP, Defensive Player, and Rising Star. Results unveil next week.</p>
+            <a class="cta" href="#" aria-label="Read more about Season Awards Voting">Read More</a>
+          </div>
+          <div class="meta">
+            <span>By Editorial Team</span>
+            <time datetime="2025-07-15">Jul 15, 2025</time>
+          </div>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="news-container">
-        <div class="news-header">
-            <h1 class="news-title">Upside Games News</h1>
-            <p class="news-subtitle">Latest updates, launches, and stories from Upside Games</p>
-        </div>
-
-        <div class="news-grid">
-            <!-- Featured Article -->
-            <article class="news-card featured-card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Game Development" class="news-image">
-                <div class="news-content">
-                    <h2 class="news-headline">Upside Games Announces Revolutionary New RPG Engine</h2>
-                    <p class="news-text">Our development team has unveiled the next-generation Upside Engine, featuring advanced AI-driven storytelling, real-time ray tracing, and seamless cross-platform multiplayer capabilities. This groundbreaking technology will power our upcoming slate of immersive RPG experiences, setting new standards for interactive entertainment.</p>
-                    <div class="news-meta">
-                        <span class="news-date">2 hours ago</span>
-                        <span class="news-category">Development</span>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Regular Articles -->
-            <article class="news-card">
-                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile Gaming" class="news-image">
-                <div class="news-content">
-                    <h2 class="news-headline">Mobile Strategy Game Hits 10 Million Players</h2>
-                    <p class="news-text">Our latest mobile strategy title has reached a milestone of 10 million active players worldwide, with record-breaking engagement rates across all regions.</p>
-                    <div class="news-meta">
-                        <span class="news-date">4 hours ago</span>
-                        <span class="news-category">Mobile</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="news-card">
-                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Esports Tournament" class="news-image">
-                <div class="news-content">
-                    <h2 class="news-headline">Upside Games Championship Series Announced</h2>
-                    <p class="news-text">Join us for the biggest competitive gaming event of the year, featuring $2 million in prizes and teams from around the globe competing in our flagship titles.</p>
-                    <div class="news-meta">
-                        <span class="news-date">6 hours ago</span>
-                        <span class="news-category">Esports</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="news-card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="VR Gaming" class="news-image">
-                <div class="news-content">
-                    <h2 class="news-headline">VR Adventure Game Enters Beta Testing</h2>
-                    <p class="news-text">Experience the future of virtual reality gaming with our upcoming fantasy adventure. Beta signups are now open for selected testers to explore mystical worlds.</p>
-                    <div class="news-meta">
-                        <span class="news-date">8 hours ago</span>
-                        <span class="news-category">VR</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="news-card">
-                <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team Expansion" class="news-image">
-                <div class="news-content">
-                    <h2 class="news-headline">Upside Games Expands Development Team</h2>
-                    <p class="news-text">We're growing! Join our talented team of developers, artists, and designers as we work on the next generation of gaming experiences. Multiple positions now available.</p>
-                    <div class="news-meta">
-                        <span class="news-date">12 hours ago</span>
-                        <span class="news-category">Careers</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="news-card">
-                <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Community Event" class="news-image">
-                <div class="news-content">
-                    <h2 class="news-headline">Annual Player Community Summit This Weekend</h2>
-                    <p class="news-text">Meet fellow gamers, get exclusive previews of upcoming releases, and participate in special tournaments at our biggest community gathering of the year.</p>
-                    <div class="news-meta">
-                        <span class="news-date">1 day ago</span>
-                        <span class="news-category">Community</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-
-    <script>
-        // Add smooth scrolling and enhanced interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.news-card');
-            
-            cards.forEach(card => {
-                card.addEventListener('click', function() {
-                    // Add click animation
-                    this.style.transform = 'scale(0.98)';
-                    setTimeout(() => {
-                        this.style.transform = '';
-                    }, 150);
-                    
-                    // Simulate navigation to full article
-                    console.log('Navigating to full article:', this.querySelector('.news-headline').textContent);
-                });
-            });
-
-            // Add intersection observer for scroll animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s ease';
-                observer.observe(card);
-            });
-        });
-    </script>
+  <!-- Optional: simple script for users who prefer reduced motion -->
+  <script>
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) {
+      document.querySelectorAll('.card').forEach(c => c.style.transition = 'none');
+    }
+  </script>
 </body>
 </html>
